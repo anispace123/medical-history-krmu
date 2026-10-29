@@ -1,0 +1,3233 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9-дәріс: XIX-XX ғғ. қоғамдық денсаулық сақтау және медициналық-биологиялық бағыттың дамуы | ҚРМУ 107Б</title>
+  <meta name="description" content="Қазақстан-Ресей Медициналық Университеті. Жалпы медицина 107Б тобы. 9-дәріс: XIX-XX ғғ. қоғамдық денсаулық сақтау және медициналық-биологиялық бағыттың дамуы. Накипов Әділжан, Аханай Ернұр, Серік Мерей.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-deep: #050b14;
+      --bg-surface: #0a1324;
+      --bg-card: rgba(13, 25, 48, 0.72);
+      --bg-card-hover: rgba(20, 38, 72, 0.88);
+      --bg-card-active: rgba(28, 52, 98, 0.95);
+      
+      --primary: #00d2ff;
+      --primary-glow: rgba(0, 210, 255, 0.38);
+      --primary-dark: #008eb0;
+      
+      --secondary: #10b981;
+      --secondary-glow: rgba(16, 185, 129, 0.35);
+      
+      --accent: #f59e0b;
+      --accent-glow: rgba(245, 158, 11, 0.35);
+      
+      --crimson: #f43f5e;
+      --crimson-glow: rgba(244, 63, 94, 0.35);
+
+      --purple: #8b5cf6;
+      --purple-glow: rgba(139, 92, 246, 0.35);
+      
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-subtle: #64748b;
+      
+      --border-light: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(0, 210, 255, 0.4);
+      --border-hover: rgba(0, 210, 255, 0.7);
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+
+      --shadow-card: 0 12px 36px -8px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.06);
+      --shadow-glow: 0 0 30px var(--primary-glow);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-deep);
+      color: var(--text-main);
+      overflow-x: hidden;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    /* Presentation mode: locked viewport */
+    body.presentation-mode {
+      overflow: hidden;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    /* Background Bio-Canvas */
+    #bio-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.65;
+    }
+
+    /* Confetti Canvas */
+    #confetti-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 9999;
+      pointer-events: none;
+    }
+
+    /* Navigation Bar */
+    header.main-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 64px;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      background: rgba(6, 12, 24, 0.82);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #00d2ff, #0055ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      font-size: 19px;
+      box-shadow: 0 0 16px var(--primary-glow);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    .brand-sub {
+      font-size: 11px;
+      color: var(--primary);
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 500;
+    }
+
+    .header-center {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .slide-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 20px;
+      background: rgba(0, 210, 255, 0.1);
+      border: 1px solid rgba(0, 210, 255, 0.3);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .timer-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--accent);
+      padding: 5px 12px;
+      border-radius: 20px;
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .icon-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-light);
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .icon-btn:hover {
+      background: rgba(0, 210, 255, 0.15);
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-1px);
+    }
+
+    .icon-btn.active {
+      background: var(--primary);
+      color: #050b14;
+      border-color: var(--primary);
+      box-shadow: 0 0 14px var(--primary-glow);
+    }
+
+    .mode-switch-btn {
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-light);
+      color: var(--text-main);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .mode-switch-btn:hover {
+      background: rgba(0, 210, 255, 0.15);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* Progress Bar */
+    .progress-bar-wrap {
+      position: fixed;
+      top: 64px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: rgba(255, 255, 255, 0.05);
+      z-index: 99;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 6.66%;
+      background: linear-gradient(90deg, #00d2ff, #10b981, #f59e0b);
+      transition: width 0.35s ease;
+      box-shadow: 0 0 10px var(--primary-glow);
+    }
+
+    /* Presentation Layout Container */
+    main#app-root {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      height: calc(100vh - 67px);
+      margin-top: 67px;
+    }
+
+    body.scroll-mode main#app-root {
+      height: auto;
+      margin-top: 67px;
+      overflow-y: visible;
+      padding-bottom: 90px;
+    }
+
+    /* Slide Deck Container (in presentation mode) */
+    .slides-deck {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body.scroll-mode .slides-deck {
+      height: auto;
+      overflow: visible;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      padding: 24px;
+      max-width: 1380px;
+      margin: 0 auto;
+    }
+
+    /* Single Slide */
+    .slide-item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 32px 48px 90px 48px;
+      display: flex;
+      flex-direction: column;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(40px) scale(0.98);
+      transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.45s;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    .slide-item.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0) scale(1);
+      z-index: 5;
+    }
+
+    .slide-item.prev {
+      transform: translateX(-40px) scale(0.98);
+    }
+
+    body.scroll-mode .slide-item {
+      position: relative;
+      top: auto;
+      left: auto;
+      width: 100%;
+      height: auto;
+      min-height: 85vh;
+      opacity: 1;
+      visibility: visible;
+      transform: none !important;
+      padding: 40px;
+      background: rgba(10, 19, 36, 0.55);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-card);
+      margin-bottom: 24px;
+    }
+
+    /* Slide Top Meta */
+    .slide-meta-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .slide-topic-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--primary);
+      background: rgba(0, 210, 255, 0.08);
+      border: 1px solid rgba(0, 210, 255, 0.25);
+      padding: 4px 12px;
+      border-radius: 30px;
+    }
+
+    .slide-number-indicator {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--text-subtle);
+    }
+
+    .slide-header {
+      margin-bottom: 22px;
+    }
+
+    .slide-title {
+      font-size: clamp(22px, 2.6vw, 36px);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1.25;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .slide-title span.highlight {
+      background: linear-gradient(135deg, #00d2ff, #10b981);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .slide-sub {
+      font-size: clamp(13px, 1.1vw, 16px);
+      color: var(--text-muted);
+      margin-top: 6px;
+      max-width: 900px;
+    }
+
+    /* Slide Content Grid Layouts */
+    .content-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      flex: 1;
+    }
+
+    .content-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      flex: 1;
+    }
+
+    .content-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      flex: 1;
+    }
+
+    .content-grid-image-right {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+      flex: 1;
+      align-items: stretch;
+    }
+
+    .content-grid-image-left {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 28px;
+      flex: 1;
+      align-items: stretch;
+    }
+
+    /* Glass Cards */
+    .glass-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .glass-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-accent);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-card), 0 0 20px rgba(0, 210, 255, 0.15);
+    }
+
+    .card-glow-edge {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
+      opacity: 0.7;
+    }
+
+    .glass-card.emerald .card-glow-edge {
+      background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+    }
+
+    .glass-card.amber .card-glow-edge {
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    }
+
+    .glass-card.crimson .card-glow-edge {
+      background: linear-gradient(90deg, transparent, var(--crimson), transparent);
+    }
+
+    .glass-card.purple .card-glow-edge {
+      background: linear-gradient(90deg, transparent, var(--purple), transparent);
+    }
+
+    /* Image Wrapper */
+    .image-frame {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-card);
+      height: 100%;
+      min-height: 280px;
+      background: #060e1c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .image-frame:hover img {
+      transform: scale(1.03);
+    }
+
+    .image-caption-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 16px 20px;
+      background: linear-gradient(0deg, rgba(5, 11, 20, 0.95) 0%, rgba(5, 11, 20, 0.6) 70%, transparent 100%);
+      color: #fff;
+    }
+
+    .image-caption-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+      color: var(--primary);
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .image-caption-title {
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    /* Card Elements */
+    .card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(0, 210, 255, 0.1);
+      border: 1px solid rgba(0, 210, 255, 0.25);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      font-size: 20px;
+    }
+
+    .card-icon.emerald {
+      background: rgba(16, 185, 129, 0.1);
+      border-color: rgba(16, 185, 129, 0.25);
+      color: var(--secondary);
+    }
+
+    .card-icon.amber {
+      background: rgba(245, 158, 11, 0.1);
+      border-color: rgba(245, 158, 11, 0.25);
+      color: var(--accent);
+    }
+
+    .card-icon.purple {
+      background: rgba(139, 92, 246, 0.1);
+      border-color: rgba(139, 92, 246, 0.25);
+      color: var(--purple);
+    }
+
+    .card-icon.crimson {
+      background: rgba(244, 63, 94, 0.1);
+      border-color: rgba(244, 63, 94, 0.25);
+      color: var(--crimson);
+    }
+
+    .card-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+      line-height: 1.35;
+    }
+
+    .card-desc {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .card-meta-list {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .card-meta-item {
+      font-size: 12.5px;
+      color: #cbd5e1;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .card-meta-item svg {
+      flex-shrink: 0;
+      margin-top: 2px;
+      color: var(--primary);
+    }
+
+    /* Key Stat Pill */
+    .stat-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    /* Title Slide Custom Hero */
+    .title-hero-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .hero-univ-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 22px;
+      border-radius: 40px;
+      background: rgba(0, 210, 255, 0.08);
+      border: 1px solid rgba(0, 210, 255, 0.35);
+      box-shadow: 0 0 20px var(--primary-glow);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--primary);
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .hero-main-title {
+      font-size: clamp(28px, 4vw, 54px);
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .hero-main-title span.grad {
+      background: linear-gradient(135deg, #00d2ff 0%, #10b981 50%, #f59e0b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-lecture-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent);
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      padding: 6px 18px;
+      border-radius: 20px;
+      margin-bottom: 32px;
+      display: inline-block;
+    }
+
+    /* Authors Banner */
+    .authors-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      width: 100%;
+      max-width: 900px;
+      margin-bottom: 34px;
+    }
+
+    .author-card {
+      background: rgba(15, 27, 52, 0.65);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-align: left;
+      transition: all 0.3s ease;
+    }
+
+    .author-card:hover {
+      background: rgba(20, 36, 70, 0.9);
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .author-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #00d2ff, #10b981);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #050b14;
+      font-weight: 800;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+
+    .author-info h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .author-info p {
+      font-size: 11.5px;
+      color: var(--primary);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .hero-action-buttons {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .btn-primary-action {
+      padding: 13px 32px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #00d2ff, #0077ff);
+      color: #050b14;
+      font-size: 15px;
+      font-weight: 800;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 0 24px var(--primary-glow);
+      transition: all 0.25s ease;
+    }
+
+    .btn-primary-action:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 0 35px var(--primary-glow);
+      color: #fff;
+    }
+
+    .btn-secondary-action {
+      padding: 13px 26px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-light);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s ease;
+    }
+
+    .btn-secondary-action:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* Interactive Timeline */
+    .timeline-strip {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin-top: 10px;
+      position: relative;
+    }
+
+    .timeline-node-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 18px 16px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+
+    .timeline-node-card:hover, .timeline-node-card.active {
+      background: var(--bg-card-hover);
+      border-color: var(--primary);
+      transform: translateY(-3px);
+      box-shadow: 0 0 20px var(--primary-glow);
+    }
+
+    .timeline-step-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .timeline-step-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .timeline-step-text {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Interactive Demographic Chart Bars */
+    .demographic-chart-box {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .chart-row {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .chart-label-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    .chart-country-name {
+      font-weight: 600;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .chart-value-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .chart-bar-bg {
+      width: 100%;
+      height: 10px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 6px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .chart-bar-fill {
+      height: 100%;
+      border-radius: 6px;
+      background: linear-gradient(90deg, #00d2ff, #10b981);
+      transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .chart-bar-fill.danger {
+      background: linear-gradient(90deg, #f59e0b, #f43f5e);
+    }
+
+    /* Interactive Simulator: Pasteur Anthrax Attenuation */
+    .simulator-container {
+      background: rgba(8, 16, 32, 0.8);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .slider-control-row {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .slider-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .custom-range {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 8px;
+      border-radius: 5px;
+      background: linear-gradient(90deg, #10b981, #f59e0b, #f43f5e);
+      outline: none;
+      cursor: pointer;
+    }
+
+    .custom-range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #fff;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0, 210, 255, 0.8);
+      border: 2px solid var(--primary);
+    }
+
+    .sim-result-box {
+      background: rgba(0, 210, 255, 0.06);
+      border: 1px solid rgba(0, 210, 255, 0.25);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .sim-badge-state {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: var(--primary);
+      color: #050b14;
+      flex-shrink: 0;
+    }
+
+    /* Interactive Comparison Toggle: Pinel Reform */
+    .compare-toggle-bar {
+      display: flex;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 30px;
+      padding: 4px;
+      border: 1px solid var(--border-light);
+      margin-bottom: 16px;
+      max-width: 440px;
+    }
+
+    .compare-btn {
+      flex: 1;
+      padding: 8px 16px;
+      border-radius: 24px;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .compare-btn.active {
+      background: var(--primary);
+      color: #050b14;
+      box-shadow: 0 0 15px var(--primary-glow);
+    }
+
+    /* Quiz Container */
+    .quiz-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-xl);
+      padding: 28px 34px;
+      max-width: 940px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .quiz-header-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 14px;
+    }
+
+    .quiz-step-count {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .quiz-score-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      color: var(--accent);
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    .quiz-question-text {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.45;
+    }
+
+    .quiz-options-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .quiz-opt-btn {
+      padding: 14px 18px;
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-light);
+      color: #e2e8f0;
+      font-size: 14px;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: all 0.2s ease;
+    }
+
+    .quiz-opt-btn:hover:not(:disabled) {
+      background: rgba(0, 210, 255, 0.1);
+      border-color: var(--primary);
+      color: #fff;
+      transform: translateX(4px);
+    }
+
+    .quiz-opt-btn.correct {
+      background: rgba(16, 185, 129, 0.2) !important;
+      border-color: var(--secondary) !important;
+      color: #34d399 !important;
+    }
+
+    .quiz-opt-btn.wrong {
+      background: rgba(244, 63, 94, 0.2) !important;
+      border-color: var(--crimson) !important;
+      color: #fb7185 !important;
+    }
+
+    .quiz-feedback-box {
+      background: rgba(0, 210, 255, 0.06);
+      border: 1px solid rgba(0, 210, 255, 0.2);
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+      font-size: 13.5px;
+      color: #cbd5e1;
+      display: none;
+    }
+
+    .quiz-feedback-box.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    /* Accordion Control Questions */
+    .accordion-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex: 1;
+    }
+
+    .accordion-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: all 0.25s ease;
+    }
+
+    .accordion-item:hover {
+      border-color: rgba(0, 210, 255, 0.3);
+    }
+
+    .accordion-header {
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      font-size: 14.5px;
+      font-weight: 700;
+      color: #fff;
+      user-select: none;
+    }
+
+    .accordion-header .acc-icon {
+      transition: transform 0.3s ease;
+      color: var(--primary);
+    }
+
+    .accordion-item.open .accordion-header .acc-icon {
+      transform: rotate(180deg);
+    }
+
+    .accordion-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding 0.35s ease;
+      padding: 0 20px;
+      background: rgba(7, 14, 28, 0.5);
+      color: var(--text-muted);
+      font-size: 13.5px;
+      line-height: 1.65;
+    }
+
+    .accordion-item.open .accordion-body {
+      max-height: 500px;
+      padding: 14px 20px 20px 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Bottom Controller Bar */
+    footer.presentation-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 64px;
+      z-index: 100;
+      background: rgba(6, 12, 24, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-top: 1px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+    }
+
+    body.scroll-mode footer.presentation-footer {
+      display: none;
+    }
+
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-center {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-arrow-btn {
+      height: 40px;
+      padding: 0 18px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-light);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .nav-arrow-btn:hover:not(:disabled) {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #050b14;
+      box-shadow: 0 0 16px var(--primary-glow);
+    }
+
+    .nav-arrow-btn:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+
+    /* Slide Dots Selector */
+    .slide-dots-wrap {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .slide-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .slide-dot:hover {
+      background: rgba(0, 210, 255, 0.5);
+      transform: scale(1.2);
+    }
+
+    .slide-dot.active {
+      width: 24px;
+      border-radius: 10px;
+      background: var(--primary);
+      box-shadow: 0 0 10px var(--primary-glow);
+    }
+
+    /* Drawer / Table of contents modal */
+    .drawer-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(5, 11, 20, 0.7);
+      backdrop-filter: blur(8px);
+      z-index: 200;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .drawer-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .drawer-sidebar {
+      position: fixed;
+      top: 0;
+      right: -420px;
+      width: 400px;
+      max-width: 90vw;
+      height: 100vh;
+      background: #091325;
+      border-left: 1px solid var(--border-light);
+      z-index: 201;
+      transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      box-shadow: -10px 0 40px rgba(0, 0, 0, 0.8);
+    }
+
+    .drawer-overlay.open .drawer-sidebar {
+      right: 0;
+    }
+
+    .drawer-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .drawer-list {
+      padding: 16px 20px;
+      overflow-y: auto;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .drawer-item {
+      padding: 12px 16px;
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid transparent;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .drawer-item:hover, .drawer-item.active {
+      background: rgba(0, 210, 255, 0.1);
+      border-color: var(--primary);
+    }
+
+    .drawer-item-idx {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--primary);
+      font-weight: 700;
+      width: 24px;
+    }
+
+    .drawer-item-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #fff;
+      flex: 1;
+    }
+
+    /* Keyframes */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.8; }
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: #fff !important;
+        color: #000 !important;
+        overflow: visible !important;
+      }
+      header.main-header, footer.presentation-footer, #bio-canvas, #confetti-canvas, .drawer-overlay {
+        display: none !important;
+      }
+      main#app-root {
+        margin: 0 !important;
+        height: auto !important;
+      }
+      .slide-item {
+        position: relative !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        page-break-after: always !important;
+        padding: 40px !important;
+        color: #000 !important;
+        background: #fff !important;
+        border: 1px solid #ccc !important;
+        height: auto !important;
+      }
+      .glass-card {
+        background: #f8fafc !important;
+        border: 1px solid #cbd5e1 !important;
+        color: #000 !important;
+      }
+      .card-title, .slide-title {
+        color: #000 !important;
+      }
+      .card-desc, .slide-sub {
+        color: #334155 !important;
+      }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+      .slide-item {
+        padding: 24px 24px 80px 24px;
+      }
+      .content-grid-image-right, .content-grid-image-left, .content-grid-2 {
+        grid-template-columns: 1fr;
+      }
+      .content-grid-3, .content-grid-4 {
+        grid-template-columns: 1fr 1fr;
+      }
+      .timeline-strip {
+        grid-template-columns: 1fr;
+      }
+      .authors-grid {
+        grid-template-columns: 1fr;
+      }
+      .quiz-options-list {
+        grid-template-columns: 1fr;
+      }
+      .slide-dots-wrap {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .header-center {
+        display: none;
+      }
+      .content-grid-3, .content-grid-4 {
+        grid-template-columns: 1fr;
+      }
+      .slide-title {
+        font-size: 20px;
+      }
+      .slide-item {
+        padding: 16px 16px 80px 16px;
+      }
+    }
+  </style>
+</head>
+<body class="presentation-mode">
+
+  <!-- Interactive Bio Canvas Background -->
+  <canvas id="bio-canvas"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Top Header Navigation Bar -->
+  <header class="main-header">
+    <div class="brand-wrap">
+      <div class="brand-logo" title="ҚРМУ">Қ</div>
+      <div class="brand-text">
+        <span class="brand-title">ҚРМУ • Жалпы медицина</span>
+        <span class="brand-sub">107Б тобы | 9-дәріс</span>
+      </div>
+    </div>
+
+    <div class="header-center">
+      <div class="slide-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        <span id="current-slide-num">01</span> / <span id="total-slides-num">15</span>
+      </div>
+
+      <div class="timer-badge" id="speaker-timer" title="Баяндама таймері (шертіп тоқтату не қайта қосу)">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span id="timer-display">00:00</span>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <!-- Mode Switch: Presentation vs Scroll -->
+      <button class="mode-switch-btn" id="btn-toggle-mode" title="Слайд режимі мен құжат оқу режимін ауыстыру">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <span id="mode-label">Шолу режимі</span>
+      </button>
+
+      <!-- Sound Toggle -->
+      <button class="icon-btn" id="btn-toggle-sound" title="Дыбыстық әсерлер (Web Audio)">
+        <svg id="sound-icon-on" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+      </button>
+
+      <!-- Table of Contents Drawer Toggle -->
+      <button class="icon-btn" id="btn-open-drawer" title="Слайдтар мазмұны">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      </button>
+
+      <!-- Fullscreen Toggle -->
+      <button class="icon-btn" id="btn-fullscreen" title="Толық экран режимі (F11)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar-wrap">
+    <div class="progress-bar" id="main-progress"></div>
+  </div>
+
+  <!-- Main Slide Presentation Deck -->
+  <main id="app-root">
+    <div class="slides-deck" id="slides-deck">
+
+      <!-- ==================== СЛАЙД 1: ТИТУЛДЫҚ БЕТ ==================== -->
+      <section class="slide-item active" data-slide="1">
+        <div class="title-hero-wrap">
+          <div class="hero-univ-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            Қазақстан-Ресей Медициналық Университеті (ҚРМУ)
+          </div>
+
+          <h1 class="hero-main-title">
+            XIX-XX ғғ. Қоғамдық денсаулық сақтау және <br>
+            <span class="grad">медициналық-биологиялық бағыттың</span> дамуы
+          </h1>
+
+          <div class="hero-lecture-pill">
+            9-ДӘРІС • ҒЫЛЫМИ-ТЕОРИЯЛЫҚ ЖӘНЕ КЛИНИКАЛЫҚ ТАЛДАУ
+          </div>
+
+          <!-- Авторы: Накипов Әділжан, Аханай Ернур, Серік Мерей (107Б тобы) -->
+          <div class="authors-grid">
+            <div class="author-card">
+              <div class="author-avatar">НӘ</div>
+              <div class="author-info">
+                <h4>Накипов Әділжан</h4>
+                <p>107Б Жалпы медицина</p>
+              </div>
+            </div>
+
+            <div class="author-card">
+              <div class="author-avatar">АЕ</div>
+              <div class="author-info">
+                <h4>Аханай Ернұр</h4>
+                <p>107Б Жалпы медицина</p>
+              </div>
+            </div>
+
+            <div class="author-card">
+              <div class="author-avatar">СМ</div>
+              <div class="author-info">
+                <h4>Серік Мерей</h4>
+                <p>107Б Жалпы медицина</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-action-buttons">
+            <button class="btn-primary-action" id="btn-start-presentation">
+              Баяндаманы бастау
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+            <button class="btn-secondary-action" id="btn-hero-explore">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              Жоспармен танысу
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== СЛАЙД 2: ДӘРІСТІҢ МАҚСАТЫ МЕН ЖОСПАРЫ ==================== -->
+      <section class="slide-item" data-slide="2">
+        <div class="slide-meta-row">
+          <span class="slide-topic-badge">1-бөлім • Кіріспе</span>
+          <span class="slide-number-indicator">Слайд 02 / 15</span>
+        </div>
+        <div class="slide-header">
+          <h2 class="slide-title">Дәрістің мақсаты, <span class="highlight">жоспары мен кілт сөздері</span></h2>
+          <p class="slide-sub">Медицина тарихындағы санитарлық-эпидемиологиялық секіріс пен ғылыми парадигмалар жүйесі.</p>
+        </div>
+
+        <div class="content-grid-3">
+          <!-- 1-жоспар -->
+          <div class="glass-card">
+            <div class="card-glow-edge"></div>
+            <div class="card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="card-title">1. Гигиена және қоғамдық медицина</h3>
+            <p class="card-desc">XIX-XX ғғ. әлемдік медицина: мемлекеттік денсаулық сақтау институционализациясы, қалалық санитария, демографиялық дағдарыстар мен статистикалық есептеулер.</p>
+            <ul class="card-meta-list">
+              <li class="card-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Холера індетінің тарихи сабақтары</li>
+              <li class="card-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 5 Ақпараттық төңкеріс әсері</li>
+              <li class="card-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Дәрігерлер мен төсек-орын тапшылығы</li>
+            </ul>
+          </div>
+
+          <!-- 2-жоспар -->
+          <div class="glass-card emerald">
+            <div class="card-glow-edge"></div>
+            <div class="card-icon emerald">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+            </div>
+            <h3 class="card-title">2. Жұқпалы дерттер және Вакцинация</h3>
+            <p class="card-desc">Эмпирикалық вариоляциядан эксперименттік иммунологияға өту: Э. Дженнер, Л. Пастер, Р. Кох триумфы және ауру қоздырғыштарын жою әдістері.</p>
+            <ul class="card-meta-list">
+              <li class="card-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Шешекке қарсы сиыр шешегі (1796)</li>
+              <li class="card-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Сібір жарасы мен құтыру вакцинасы</li>
+              <li class="card-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Кох таяқшасы және туберкулин</li>
+            </ul>
+          </div>
+
+          <!-- 3-жоспар -->
+          <div class="glass-card amber">
+            <div class="card-glow-edge"></div>
+            <div class="card-icon amber">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 0-9.8 12c.4 1.8 1.4 3.4 2.8 4.6l.8.7.4 1.1c.3.9 1 1.6 2 1.6h7.6c1 0 1.7-.7 2-1.6l.4-1.1.8-.7c1.4-1.2 2.4-2.8 2.8-4.6A10 10 0 0 0 12 2z"/></svg>
+            </div>
+            <h3 class="card-title">3. Педиатрия және Клиникалық Психиатрия</h3>
+            <p class="card-desc">Бала организмінің ерекшеліктерін мойындау және психикалық дерттерге гуманды, биологиялық-органикалық көзқарастың орнығуы.</p>
+            <ul class="card-meta-list">
+              <li class="card-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Глиссон, Сиденхэм және бала емханалары</li>
+              <li class="card-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Ф. Пинель: шынжырларды шешу реформасы</li>
+              <li class="card-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> В.М. Бехтерев психоневрологиялық мектебі</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== СЛАЙД 3: ТАРИХИ КОНТЕКСТ ЖӘНЕ ХОЛЕРА ІНДЕТІ ==================== -->
+      <section class="slide-item" data-slide="3">
+        <div class="slide-meta-row">
+          <span class="slide-topic-badge">2-бөлім • Тарихи Алғышарттар</span>
+          <span class="slide-number-indicator">Слайд 03 / 15</span>
+        </div>
+        <div class="slide-header">
+          <h2 class="slide-title">XIX ғасырдың әлеуметтік дағдарысы және <span class="highlight">Холера пандемиялары</span></h2>
+          <p class="slide-sub">Өнеркәсіп төңкерісі, жедел урбанизация және жеке емдеуден «Мемлекеттік денсаулық сақтауға» өту.</p>
+        </div>
+
+        <div class="content-grid-2">
+          <div class="glass-card">
+            <div class="card-glow-edge"></div>
+            <h3 class="card-title">Холера дерті: Мемлекеттік реформалардың катализаторы</h3>
+            <p class="card-desc">
+              XIX ғасырдың алғашқы жартысында холера (тырысқақ) індеті Еуропа, Ресей және АҚШ елдерінде алапат жылдамдықпен тарады. Бұрын-соңды болмаған өлім-жітім мемлекеттерді медицинаға деген көзқарасты түбегейлі өзгертуге мәжбүр етті:
+            </p>
+            <ul class="card-meta-list" style="margin-top: 18px;">
+              <li class="card-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Санитарлық полиция мен заңнама:</strong> Тұрғын үйлердің тығыздығын, ауыз су сапасын мемлекеттік бақылауға алу.</span>
+              </li>
+              <li class="card-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Су құбыры мен канализация:</strong> Джон Сноудың Лондондағы "Broad Street" су колонкасын зерттеуінен басталған таза инфрақұрылым құрылысы.</span>
+              </li>
+              <li class="card-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Жаппай үгіт-насихат:</strong> Жеке гигиена, қайнатылған су, қол жуу талаптарын халыққа міндеттеу.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="glass-card crimson">
+            <div class="card-glow-edge"></div>
+            <div class="card-icon crimson">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <h3 class="card-title">Парадигманың ауысуы: Жеке емнен Қоғамдық денсаулыққа</h3>
+            <p class="card-desc">
+              XIX ғасырға дейін медицина тек ауырып қалған ауқатты адамды жеке емдеумен шектелсе, холера мен оба індеттері <em>«Кез келген кедейдің ауруы бүкіл қоғамға қауіп төндіреді»</em> деген ақиқатты дәлелдеді.
+            </p>
+            <div style="background: rgba(244, 63, 94, 0.08); border-left: 3px solid var(--crimson); padding: 12px 16px; border-radius: 6px; margin-top: 16px;">
+              <span style="font-size: 13px; color: #fecdd3; font-weight: 600;">
+                Нәтижесі: Санитарлық статистика, эпидемиологиялық картографиялау және мемлекеттік деңгейдегі денсаулық сақтау министрліктері мен кеңестері құрыла бастады.
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== СЛАЙД 4: 5 АҚПАРАТТЫҚ ТӨҢКЕРІС ЖӘНЕ МЕДИЦИНА ==================== -->
+      <section class="slide-item" data-slide="4">
+        <div class="slide-meta-row">
+          <span class="slide-topic-badge">3-бөлім • Ақпараттық Эволюция</span>
+          <span class="slide-number-indicator">Слайд 04 / 15</span>
+        </div>
+        <div class="slide-header">
+          <h2 class="slide-title">Адамзаттың <span class="highlight">5 ақпараттық төңкерісі</span> және Медицина</h2>
+          <p class="slide-sub">Ғылыми білімді сақтау, тарату және жаһандық деңгейде жедел жеткізу эволюциясы.</p>
+        </div>
+
+        <div class="timeline-strip">
+          <!-- 1-төңкеріс -->
+          <div class="timeline-node-card">
+            <div class="timeline-step-num"><span>I ТӨҢКЕРІС</span> <span>Б.з.б.</span></div>
+            <h4 class="timeline-step-title">Жазудың пайда болуы</h4>
+            <p class="timeline-step-text">Ежелгі емдеу тәжірибелері папирустар мен тастарға жазылып, медициналық білім ұрпақтан ұрпаққа жүйелі түрде сақталды.</p>
+          </div>
+
+          <!-- 2-төңкеріс -->
+          <div class="timeline-node-card">
+            <div class="timeline-step-num"><span>II ТӨҢКЕРІС</span> <span>XVI ғ.</span></div>
+            <h4 class="timeline-step-title">Кітап басып шығару</h4>
+            <p class="timeline-step-text">Везалийдің анатомиялық атластары мен ғылыми трактаттар жаппай көбейіп, білім дәрігерлерге қолжетімді болды.</p>
+          </div>
+
+          <!-- 3-төңкеріс -->
+          <div class="timeline-node-card active">
+            <div class="timeline-step-num"><span>III ТӨҢКЕРІС</span> <span>XIX ғ. аяғы</span></div>
+            <h4 class="timeline-step-title">Телеграф, телефон, радио</h4>
+            <p class="timeline-step-text">Індеттер туралы дабылдар дүние жүзіне лезде жетіп, халықаралық санитарлық конвенциялар құрылды.</p>
+          </div>
+
+          <!-- 4-төңкеріс -->
+          <div class="timeline-node-card">
+            <div class="timeline-step-num"><span>IV ТӨҢКЕРІС</span> <span>XX ғ. 70-жж.</span></div>
+            <h4 class="timeline-step-title">Микропроцессорлар мен ЭЕМ</h4>
+            <p class="timeline-step-text">КТ, МРТ диагностикасы, зертханалық деректерді автоматты өңдеу және электронды медицинаның негізі қаланды.</p>
+          </div>
+
+          <!-- 5-төңкеріс -->
+          <div class="timeline-node-card">
+            <div class="timeline-step-num"><span>V ТӨҢКЕРІС</span> <span>Бүгінгі күн</span></div>
+            <h4 class="timeline-step-title">Ғаламтор және ЖИ</h4>
+            <p class="timeline-step-text">Жер шарын біртұтас алақанға сыйғызған телемедицина, биоинформатика, генетикалық секвенирлеу және қашықтан емдеу.</p>
+          </div>
+        </div>
+
+        <div class="glass-card" style="margin-top: 24px; padding: 20px;">
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <div class="card-icon" style="margin-bottom: 0;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div>
+              <h4 style="font-size: 14.5px; font-weight: 700; color: #fff;">Медициналық қорытынды:</h4>
+              <p style="font-size: 13px; color: var(--text-muted);">
+                XIX ғасырдың соңындағы 3-ақпараттық төңкеріс медицинаны локалды (шектеулі) сипаттан <strong>жаһандық ғылыми желіге</strong> айналдырды. Пастер мен Кохтың жаңалықтары апта ішінде әлемнің басқа бұрыштарына жетіп отырды.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== СЛАЙД 5: ДЕМОГРАФИЯЛЫҚ СТАТИСТИКА ЖӘНЕ РЕСУРС ТАПШЫЛЫҒЫ ==================== -->
+      <section class="slide-item" data-slide="5">
+        <div class="slide-meta-row">
+          <span class="slide-topic-badge">4-бөлім • Демографиялық Аналитика</span>
+          <span class="slide-number-indicator">Слайд 05 / 15</span>
+        </div>
+        <div class="slide-header">
+          <h2 class="slide-title">1910-1913 жж. <span class="highlight">Демографиялық дағдарыс</span> және Ресурс тапшылығы</h2>
+          <p class="slide-sub">Ресей империясы мен Батыс Еуропа елдерінің салыстырмалы статистикалық көрсеткіштері.</p>
+        </div>
+
+        <div class="content-grid-2">
+          <!-- Салыстырмалы көрсеткіштер диаграммасы -->
+          <div class="glass-card">
+            <div class="card-glow-edge"></div>
+            <h3 class="card-title">Жалпы өлім-жітім (1000 адамға шаққанда, 1910-1913 жж.)</h3>
+            
+            <div class="demographic-chart-box" style="margin-top: 14px;">
+              <div class="chart-row">
+                <div class="chart-label-row">
+                  <span class="chart-country-name">🔴 Ресей Империясы (1913 ж.)</span>
+                  <span class="chart-value-tag" style="color: #f43f5e;">29.1 ‰ (25-30)</span>
+                </div>
+                <div class="chart-bar-bg">
+                  <div class="chart-bar-fill danger" style="width: 95%;"></div>
+                </div>
+              </div>
+
+              <div class="chart-row">
+                <div class="chart-label-row">
+                  <span class="chart-country-name">🔵 Франция (1910 ж.)</span>
+                  <span class="chart-value-tag">17.7 %</span>
+                </div>
+                <div class="chart-bar-bg">
+                  <div class="chart-bar-fill" style="width: 58%;"></div>
+                </div>
+              </div>
+
+              <div class="chart-row">
+                <div class="chart-label-row">
+                  <span class="chart-country-name">🔵 Германия (1910 ж.)</span>
+                  <span class="chart-value-tag">16.2 %</span>
+                </div>
+                <div class="chart-bar-bg">
+                  <div class="chart-bar-fill" style="width: 53%;"></div>
+                </div>
+              </div>
+
+              <div class="chart-row">
+                <div class="chart-label-row">
+                  <span class="chart-country-name">🔵 АҚШ (1910 ж.)</span>
+                  <span class="chart-value-tag">15.9 %</span>
+                </div>
+                <div class="chart-bar-bg">
+                  <div class="chart-bar-fill" style="width: 51%;"></div>
+                </div>
+              </div>
+
+              <div class="chart-row">
+                <div class="chart-label-row">
+                  <span class="chart-country-name">🔵 Англия (1910 ж.)</span>
+                  <span class="chart-value-tag">13.5 %</span>
+                </div>
+                <div class="chart-bar-bg">
+                  <div class="chart-bar-fill" style="width: 44%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 14px; margin-top: 20px;">
+              <div style="flex: 1; padding: 12px; background: rgba(255,255,255,0.03); border-radius: 8px;">
+                <div class="stat-pill" style="color: #f43f5e;">~40 жас</div>
+                <div style="font-size: 11.5px; color: var(--text-muted);">Ресейдегі орташа өмір сүру ұзақтығы</div>
+              </div>
+              <div style="flex: 1; padding: 12px; background: rgba(255,255,255,0.03); border-radius: 8px;">
+                <div class="stat-pill" style="color: #10b981;">50+ жас</div>
+                <div style="font-size: 11.5px; color: var(--text-muted);">Батыс Еуропадағы өмір ұзақтығы</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ресурс тапшылығы -->
+          <div class="glass-card crimson">
+            <div class="card-glow-edge"></div>
+            <h3 class="card-title">Нәресте өлімі және Медициналық инфратұрылым тапшылығы</h3>
+            <p class="card-desc">
+              Ресейде жыл сайын дүниеге келген <strong>6 миллионға жуық баланың 2 миллионы</strong> жұқпалы аурулар мен дұрыс тамақтанбаудан шетінеген (нәресте өлімі 1000 балаға 250-269 болды).
+            </p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px;">
+              <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 10px; border: 1px solid var(--border-light);">
+                <div style="font-size: 11px; color: var(--primary); font-family: 'JetBrains Mono';">ДӘРІГЕР ТАПШЫЛЫҒЫ</div>
+                <div style="font-size: 20px; font-weight: 800; color: #fff; margin: 4px 0;">1 : 7000+</div>
+                <div style="font-size: 11.5px; color: var(--text-muted);">1 дәрігерге 7 мыңнан астам тұрғын (Германияда 1 : 2000)</div>
+              </div>
+
+              <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 10px; border: 1px solid var(--border-light);">
+                <div style="font-size: 11px; color: var(--accent); font-family: 'JetBrains Mono';">АУРУХАНА ТӨСЕГІ</div>
+                <div style="font-size: 20px; font-weight: 800; color: #fff; margin: 4px 0;">1 : 1000</div>
+                <div style="font-size: 11.5px; color: var(--text-muted);">1000 тұрғынға небары 1 төсектен ғана келді</div>
+              </div>
+            </div>
+
+            <div style="margin-top: 14px; font-size: 12.5px; color: #cbd5e1; line-height: 1.5;">
+              ⚠️ 1913 жылға қарай бүкіл империяда тек <strong>9 балалар және әйелдер консультациясы</strong>, барлығы 16 медициналық жоғары оқу орны ғана болды.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== СЛАЙД 6: ЖАРАТЫЛЫСТАНУ МЕН ТЕОРИЯЛЫҚ МЕДИЦИНА ==================== -->
+      <section class="slide-item" data-slide="6">
+        <div class="slide-meta-row">
+          <span class="slide-topic-badge">5-бөлім • Биологиялық Фундамент</span>
+          <span class="slide-number-indicator">Слайд 06 / 15</span>
+        </div>
+        <div class="slide-header">
+          <h2 class="slide-title">Теориялық іргетас: <span class="highlight">Жаратылыстану мен Эксперименттік ғылым</span></h2>
+          <p class="slide-sub">Тірі организмдердің жасушалық құрылымы, эволюция және микробиологияның қос дәуірі.</p>
+        </div>
+
+        <div class="content-grid-3">
+          <div class="glass-card">
+            <div class="card-glow-edge"></div>
+            <div class="card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><path d="M10.4 13.6L6.4 17.6M17.6 6.4l-4 4"/></svg>
+            </div>
+            <h3 class="card-title">Жасушалық және Эволюциялық теория</h3>
+            <p class="card-desc">
+              Т. Шванн, М. Шлейден және Рудольф Вирховтың <em>«Барлық жасуша жасушадан пайда болады» (Omnis cellula e cellula)</em> қағидасы аурулардың патогенезін жасушалық зақымдану арқылы түсіндіруге жол ашты. Ч. Дарвиннің эволюциялық ілімі организмнің бейімделу заңдарын айқындады.
+            </p>
+          </div>
+
+          <div class="glass-card emerald">
+            <div class="card-glow-edge"></div>
+            <div class="card-icon emerald">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <h3 class="card-title">Микробиологияның қос дәуірі</h3>
+            <p class="card-desc">
+              <strong>1. Эмпирикалық кезең:</strong> (XIX ғ. екінші жартысына дейін). Бақылау және халықтық тәжірибеге сүйенген іс-әрекеттер (мысалы, шешекке қарсы вариоляция).<br><br>
+              <strong>2. Эксперименттік кезең:</strong> Зертханалық бактерияларды бөліп алу, қоректік ортада өсіру және иммунитеттің жасушалық/гуморалдық механизмдерін ашу.
+            </p>
+          </div>
+
+          <div class="glass-card amber">
+            <div class="card-glow-edge"></div>
+            <div class="card-icon amber">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3 class="card-title">Тұңғыш Ғылыми ҒЗИ-лар</h3>
+            <p class="card-desc">
+              1890 жылы құрылған <strong>Санкт-Петербург Эксперименттік медицина институты</strong> сол дәуірдің озық зертханалық орталығына айналды. Мұнда И.П. Павлов ас қорыту және жоғары жүйке қызметі физиологиясын жасақтаса, В.М. Бехтерев Психоневрологиялық институт негізін салды.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== СЛАЙД 7: ЭДВАРД ДЖЕННЕР ЖӘНЕ ШЕШЕКПЕН КҮРЕС ==================== -->
+      <section class="slide-item" data-slide="7">
+        <div class="slide-meta-row">
+          <span class="slide-topic-badge">6-бөлім • Иммунологияның Бастауы</span>
+          <span class="slide-number-indicator">Слайд 07 / 15</span>
+        </div>
+        <div class="slide-header">
+          <h2 class="slide-title">Эдвард Дженнер: <span class="highlight">Вариоляциядан Вакцинацияға</span> өту ерлігі</h2>
+          <p class="slide-sub">1796 жылғы 14 мамырдағы тарихи эксперимент және шешек дертіне тосқауыл қою.</p>
+        </div>
+
+        <div class="content-grid-image-right">
+          <div class="glass-card">
+            <div class="card-glow-edge"></div>
+            <h3 class="card-title">Шешекпен күрес және тарихи байқау</h3>
+            <p class="card-desc">
+              Табиғи шешек ғасырлар бойы халықты қырған ең қауіпті кесел болды. Ежелгі заманнан келе жатқан <strong>вариоляция</strong> (шешек бөртпесін тікелей адамға егу) көбінесе адамдардың ауыр сырқаттануына немесе өліміне әкеліп соқтыратын.
+            </p>
+
+            <div style="background: rgba(0, 210, 255, 0.06); border-radius: 12px; padding: 14px; margin-top: 14px; border: 1px solid rgba(0,210,255,0.2);">
+              <h4 style="font-size: 13.5px; font-weight: 700; color: #fff; margin-bottom: 6px;">💡 Дженнердің ұлы ашылуы (1749-1823):</h4>
+              <p style="font-size: 12.5px; color: #cbd5e1; line-height: 1.5;">
+                Жас дәрігер Эдвард Дженнер сауыншы қыз Сара Нельменің сиыр шешегімен ауырғаннан кейін қара шешекке мүлдем шалдықпайтынын байқайды. 
+              </p>
+            </div>
+
+            <!-- Интерактивті 4-қадамды эксперимент -->
+            <div style="margin-top: 16px;">
+              <h4 style="font-size: 13px; font-weight: 700; color: var(--primary); text-transform: uppercase; margin-bottom: 8px;">1796 жылғы 14 мамыр Эксперименті:</h4>
+              <div style="display: flex; flex-direction: column; gap: 8px;">
+                <div style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; font-size: 12px; border-left: 2px solid var(--primary);">
+                  <strong>1-қадам:</strong> 8 жасар Джеймс Фиппске Сараның сиыр шешегі пустуласынан лимфа егілді.
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; font-size: 12px; border-left: 2px solid var(--secondary);">
+                  <strong>2-қадам (1.5 айдан соң):</strong> Балаға нағыз табиғи қара шешек лимфасы енгізілді — бала ауырмады!
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; font-size: 12px; border-left: 2px solid var(--accent);">
+                  <strong>3-қадам:</strong> Дженнер экспериментті 23 рет қайталап, егу материалын кептіріп, шыны ыдыста сақтау мен тасымалдау әдісін тапты (variolae vaccinae).
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="image-frame">
+            <img src="./images/jenner_vaccination.jpg" alt="Эдвард Дженнер Джеймс Фиппсті егуде, 1796 жыл">
+            <div class="image-caption-overlay">
+              <div class="image-caption-tag">Тарихи эксперимент • 1796 жыл</div>
+              <div class="image-caption-title">Эдвард Дженнер 8 жасар Джеймс Фиппске сиыр шешегін егу сәті</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== СЛАЙД 8: ЛУИ ПАСТЕР ЖӘНЕ ЭКСПЕРИМЕНТТІК ИММУНОЛОГИЯ ==================== -->
+      <section class="slide-item" data-slide="8">
+        <div class="slide-meta-row">
+          <span class="slide-topic-badge">7-бөлім • Микробиология & Иммунология</span>
+          <span class="slide-number-indicator">Слайд 08 / 15</span>
+        </div>
+        <div class="slide-header">
+          <h2 class="slide-title">Луи Пастер: <span class="highlight">Ғылыми Иммунологияның негізін қалаушы</span></h2>
+          <p class="slide-sub">Тауық холерасынан күйдіргі мен құтыруға қарсы алғашқы зертханалық вакциналар.</p>
+        </div>
+
+        <div class="content-grid-image-left">
+          <div class="image-frame">
+            <img src="./images/louis_pasteur_lab.jpg" alt="Луи Пастер өз зертханасында">
+            <div class="image-caption-overlay">
+              <div class="image-caption-tag">Париж Зертханасы • XIX ғасыр</div>
+              <div class="image-caption-title">Луи Пастер вакциналардың вируленттілігін зерттеу үстінде</div>
+            </div>
+          </div>
+
+          <div class="glass-card emerald">
+            <div class="card-glow-edge"></div>
+            <h3 class="card-title">Иммунитеттің ғылыми заңдылығы</h3>
+            <p class="card-desc">
+              Француз химигі әрі микробиологы Луи Пастер (1822-1895) тауық холерасын зерттей отырып: <em>«Бірінші әлсіреген ауру кейінгі өлімші дерттен қорғайды»</em> деген фундаменталды қағиданы эксперимент жүзінде дәлелдеп, бұл құбылысты <strong>«иммунитет»</strong> (лат. immunitas) деп атады.
+            </p>
+
+            <!-- Интерактивті симулятор: Күйдіргі қоздырғышын қыздыру -->
+            <div class="simulator-container" style="margin-top: 14px;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 12.5px; font-weight: 700; color: #fff;">Сібір жарасы (күйдіргі) вакцинасының температурасы:</span>
+                <span id="temp-display" style="font-family: 'JetBrains Mono'; font-weight: 800; color: var(--primary); font-size: 15px;">+42.5 °C</span>
+              </div>
+
+              <div class="slider-control-row">
+                <input type="range" min="30" max="60" step="0.5" value="42.5" class="custom-range" id="pasteur-temp-range">
+                <div class="slider-labels">
+                  <span>+30°C (Жоғары уыттылық)</span>
+                  <span>+42-43°C (Пастерлік әлсірету)</span>
+                  <span>+60°C (Өлім)</span>
+                </div>
+              </div>
+
+              <div class="sim-result-box" id="pasteur-sim-box">
+                <div class="sim-badge-state" id="sim-badge">ӘЛСІРЕТІЛГЕН ВАКЦИНА</div>
+                <div style="font-size: 12px; color: #cbd5e1;" id="sim-text">
+                  +42-43°C аралығында 2-8 күнде Bacilla anthracici қоздырғышының вируленттілігі төмендеп, өмірлік иммунитет түзетін қауіпсіз вакцина алынады! (1881 ж.)
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 14px; font-size: 12.5px; color: var(--text-muted); line-height: 1.5;">
+              💉 <strong>Антирабиялық төңкеріс (1885):</strong> Пастер әлемде тұңғыш рет Жозеф Мейстер есімді баланы құтырудан аман алып қалды және Парижде 1-ші антирабиялық станция ашты.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== СЛАЙД 9: РОБЕРТ КОХ ЖӘНЕ БАКТЕРИОЛОГИЯ АЛТЫНЫ ==================== -->
+      <section class="slide-item" data-slide="9">
+        <div class="slide-meta-row">
+          <span class="slide-topic-badge">8-бөлім • Бактериология Алтыны</span>
+          <span class="slide-number-indicator">Слайд 09 / 15</span>
+        </div>
+        <div class="slide-header">
+          <h2 class="slide-title">Роберт Кох: <span class="highlight">Бактериологияның алтын дәуірі</span> және Кох триадасы</h2>
+          <p class="slide-sub">Туберкулез, тырысқақ қоздырғыштарын ашу және 1905 жылғы Нобель сыйлығы.</p>
+        </div>
+
+        <div class="content-grid-image-right">
+          <div class="glass-card">
+            <div class="card-glow-edge"></div>
+            <h3 class="card-title">Роберт Кохтың (1843-1910) іргелі жетістіктері</h3>
+            <p class="card-desc">
+              Неміс ғалымы бактерияларды таза дақыл ретінде өсіру, микрофотография және анилиндік бояу әдістерін енгізіп, инфекциялық аурулар этиологиясын дәлелдеді:
+            </p>
+
+            <ul class="card-meta-list" style="margin-top: 14px;">
+              <li class="card-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>1876 ж. Сібір жарасы:</strong> Bacillus anthracis таза дақылын алып, спора түзу сатыларын сипаттады.</span>
+              </li>
+              <li class="card-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>1882 ж. 24 наурыз:</strong> Адамзаттың басты қасіреті болған Туберкулез микобактериясын («Кох таяқшасы») ашты.</span>
+              </li>
+              <li class="card-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>1883 ж. Холера вибрионы:</strong> Мысыр мен Үндістандағы зерттеулер барысында Vibrio cholerae қоздырғышын анықтады.</span>
+              </li>
+              <li class="card-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Туберкулин және Нобель сыйлығы (1905 ж.):</strong> Диагностикалық туберкулин сынамасын ойлап тапқаны үшін марапатталды.</span>
+              </li>
+            </ul>
+
+            <div style="background: rgba(245, 158, 11, 0.08); border-left: 3px solid var(--accent); padding: 10px 14px; border-radius: 6px; margin-top: 14px;">
+              <div style="font-size: 12px; color: #fde68a; font-weight: 700;">Кохтың классикалық триадасы (постулаттары):</div>
+              <div style="font-size: 11.5px; color: #cbd5e1; margin-top: 2px;">
+                1) Микроб тек осы аурумен ауырғанда табылуы тиіс; 2) Таза дақыл ретінде бөлініп алынуы керек; 3) Сау ағзаға жұқтырғанда дәл сол ауруды тудыруы қажет.
+              </div>
+            </div>
+          </div>
+
+          <div class="image-frame">
+            <img src="./images/robert_koch_microscope.jpg" alt="Роберт Кох микроскоппен туберкулезді зерттеуде">
+            <div class="image-caption-overlay">
+              <div class="image-caption-tag">Берлин зертханасы • 1882 жыл</div>
+              <div class="image-caption-title">Роберт Кох туберкулез бактериясын таза культура ретінде зерттеуде</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== СЛАЙД 10: ПЕДИАТРИЯНЫҢ ДЕРБЕС ҒЫЛЫМ РЕТІНДЕ ДАМУЫ ==================== -->
+      <section class="slide-item" data-slide="10">
+        <div class="slide-meta-row">
+          <span class="slide-topic-badge">9-бөлім • Балалар Медицинасы</span>
+          <span class="slide-number-indicator">Слайд 10 / 15</span>
+        </div>
+        <div class="slide-header">
+          <h2 class="slide-title">Педиатрия: <span class="highlight">«Бала — кішірейтілген ересек емес»</span></h2>
+          <p class="slide-sub">Бала анатомиясы мен физиологиясының дербестігін тану және алғашқы мамандандырылған ауруханалар.</p>
+        </div>
+
+        <div class="content-grid-image-left">
+          <div class="image-frame">
+            <img src="./images/pediatric_hospital.jpg" alt="19 ғасырдағы балалар ауруханасы">
+            <div class="image-caption-overlay">
+              <div class="image-caption-tag">Hôpital des Enfants Malades • 1745</div>
+              <div class="image-caption-title">Әлемдегі алғашқы балалар клиникасы және нәрестелер күтімі</div>
+            </div>
+          </div>
+
+          <div class="glass-card">
+            <div class="card-glow-edge"></div>
+            <h3 class="card-title">Педиатрияның дербес ғылымға айналу кезеңдері</h3>
+            <p class="card-desc">
+              XVIII ғасырға дейін бала денсаулығы ересектермен бірдей саналған. Бала ағзасының даму ерекшеліктерін ескеру қажеттілігі келесі ғалымдардың еңбегімен қалыптасты:
+            </p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px;">
+              <div style="background: rgba(255,255,255,0.03); padding: 10px; border-radius: 8px;">
+                <h5 style="color: var(--primary); font-size: 13px;">Фрэнсис Глиссон (1650)</h5>
+                <p style="font-size: 11.5px; color: var(--text-muted); margin-top: 3px;">
+                  Рахит (мешел) ауруы мен сүйек жүйесінің өзгеруін алғаш ғылыми сипаттады.
+                </p>
+              </div>
+
+              <div style="background: rgba(255,255,255,0.03); padding: 10px; border-radius: 8px;">
+                <h5 style="color: var(--secondary); font-size: 13px;">Томас Сиденхэм</h5>
+                <p style="font-size: 11.5px; color: var(--text-muted); margin-top: 3px;">
+                  «Ағылшын Гиппократы»: қызылша, қызамық, шешектің балалардағы өту ерекшелігін ашты.
+                </p>
+              </div>
+
+              <div style="background: rgba(255,255,255,0.03); padding: 10px; border-radius: 8px;">
+                <h5 style="color: var(--accent); font-size: 13px;">Жан-Жак Руссо</h5>
+                <p style="font-size: 11.5px; color: var(--text-muted); margin-top: 3px;">
+                  Балалардың табиғи иммунитетін арттыруда ана сүтімен емізуді және таза ауаны насихаттады.
+                </p>
+              </div>
+
+              <div style="background: rgba(255,255,255,0.03); padding: 10px; border-radius: 8px;">
+                <h5 style="color: var(--purple); font-size: 13px;">Карл Рот & Р. Вирхов</h5>
+                <p style="font-size: 11.5px; color: var(--text-muted); margin-top: 3px;">
+                  Балалардың тамақтану бұзылыстары мен иммундық жасушалық патологиясын зерттеді.
+                </p>
+              </div>
+            </div>
+
+            <div style="margin-top: 14px; font-size: 12px; color: #cbd5e1; line-height: 1.4; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 10px;">
+              🏥 <strong>Алғашқы ауруханалар:</strong> 1745 ж. Парижде «Hôpital des Enfants Malades» және 1769 ж. Лондонда «Foundling Hospital» ашылып, балалар өлімін азайтуға бетбұрыс жасады.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== СЛАЙД 11: КЛИНИКАЛЫҚ ПСИХИАТРИЯНЫҢ ГУМАНИСТІК ЖӘНЕ БИОЛОГИЯЛЫҚ РЕВОЛЮЦИЯСЫ ==================== -->
+      <section class="slide-item" data-slide="11">
+        <div class="slide-meta-row">
+          <span class="slide-topic-badge">10-бөлім • Клиникалық Психиатрия</span>
+          <span class="slide-number-indicator">Слайд 11 / 15</span>
+        </div>
+        <div class="slide-header">
+          <h2 class="slide-title">Клиникалық Психиатрия: <span class="highlight">Шынжырды шешу және Биологиялық Парадигма</span></h2>
+          <p class="slide-sub">Филипп Пинель гуманизмі және психикалық дерттердің табиғи-органикалық этиологиясы.</p>
+        </div>
+
+        <div class="content-grid-image-right">
+          <div class="glass-card purple">
+            <div class="card-glow-edge"></div>
+
+            <!-- Интерактивті реформа салыстырғышы -->
+            <div class="compare-toggle-bar">
+              <button class="compare-btn active" id="btn-reform-new">Ғылыми парадигма (Пинель)</button>
+              <button class="compare-btn" id="btn-reform-old">Орта ғасырлық қараңғылық</button>
+            </div>
+
+            <div id="reform-content-box">
+              <h3 class="card-title" id="reform-title" style="color: var(--primary);">Филипп Пинель және Жан-Этьен Эскироль</h3>
+              <p class="card-desc" id="reform-desc">
+                1793-1795 жылдары Париждегі Бисетр және Сальпетриер ауруханаларында Филипп Пинель науқастардың мойнындағы <strong>темір шынжырларды шешіп</strong>, емдеуге адамгершілік (моральдық) пен мейірімділік қағидасын енгізді.
+              </p>
+              
+              <ul class="card-meta-list" id="reform-list" style="margin-top: 14px;">
+                <li class="card-meta-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Табиғи-биологиялық себептер:</strong> Ауру тылсым жын-шайтаннан емес, вегетативтік жүйке жүйесі мен ми зақымдануынан пайда болады.</span>
+                </li>
+                <li class="card-meta-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Кешенді ем:</strong> Ұзақ стресс пен күйзелісті емдік шаралармен, психотерапиямен және химиялық/өсімдік дәрілерімен емдеу.</span>
+                </li>
+                <li class="card-meta-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>В.М. Бехтерев мектебі:</strong> Психоневрологиялық институт негізінде клиникалық психопатологияны қалыптастырды.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="image-frame">
+            <img src="./images/pinel_psychiatry.jpg" alt="Филипп Пинель Сальпетриерде науқастардың шынжырын шешуде">
+            <div class="image-caption-overlay">
+              <div class="image-caption-tag">Париж, Сальпетриер • 1795 жыл</div>
+              <div class="image-caption-title">Филипп Пинель психикалық науқастардың шынжырын алып тастауда</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== СЛАЙД 12: ҚОҒАМДЫҚ ДЕНСАУЛЫҚ ЖӘНЕ БҮГІНГІ ЗАМАНҒА САБАҚ ==================== -->
+      <section class="slide-item" data-slide="12">
+        <div class="slide-meta-row">
+          <span class="slide-topic-badge">11-бөлім • Қоғамдық Денсаулық Резюмесі</span>
+          <span class="slide-number-indicator">Слайд 12 / 15</span>
+        </div>
+        <div class="slide-header">
+          <h2 class="slide-title">XIX-XX ғғ. медицинасының сабақтары және <span class="highlight">Бүгінгі заман</span></h2>
+          <p class="slide-sub">Дәлелді медицинаның қалыптасуы және Қазақстанның заманауи денсаулық сақтау басымдықтары.</p>
+        </div>
+
+        <div class="content-grid-3">
+          <div class="glass-card">
+            <div class="card-glow-edge"></div>
+            <div class="card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3 class="card-title">1. Жаппай вакцинация жүйесі</h3>
+            <p class="card-desc">
+              Дженнер мен Пастердің бастамасымен бүгінгі Ұлттық екпе күнтізбесі қалыптасты. Соның арқасында қара шешек жер бетінен толық жойылды, ал полиомиелит, сіреспе және дифтерия сирек дерттер қатарына енді.
+            </p>
+          </div>
+
+          <div class="glass-card emerald">
+            <div class="card-glow-edge"></div>
+            <div class="card-icon emerald">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="card-title">2. Ана мен баланы қорғау</h3>
+            <p class="card-desc">
+              1913 жылы Ресейде болған 250-269‰ нәресте өлімімен салыстырғанда, бүгінгі Қазақстанда нәресте өлімі 1000 тірі туғанға 7-8-ге дейін азайды. Бұл педиатрия мен перинаталдық орталықтардың жемісі.
+            </p>
+          </div>
+
+          <div class="glass-card amber">
+            <div class="card-glow-edge"></div>
+            <div class="card-icon amber">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            </div>
+            <h3 class="card-title">3. Санитарлық қадағалау & Инфектология</h3>
+            <p class="card-desc">
+              Ковид-19 пандемиясы көрсеткендей, Роберт Кох пен Луи Пастер салған эпидемиологиялық қадағалау және шұғыл молекулярлық-генетикалық мониторинг кез келген мемлекеттің басты қауіпсіздік қалқаны болып табылады.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== СЛАЙД 13: ИНТЕРАКТИВТІ БЕКІТУ ВИКТОРИНАСЫ ==================== -->
+      <section class="slide-item" data-slide="13">
+        <div class="slide-meta-row">
+          <span class="slide-topic-badge">12-бөлім • Интерактивті Тест</span>
+          <span class="slide-number-indicator">Слайд 13 / 15</span>
+        </div>
+        <div class="slide-header" style="text-align: center;">
+          <h2 class="slide-title" style="justify-content: center;">Дәрісті бекіту: <span class="highlight">Quiz Arena (10 сұрақ)</span></h2>
+          <p class="slide-sub" style="margin: 6px auto;">Біліміңізді тексеріңіз! Дұрыс жауапты таңдап, жылдам нәтиже алыңыз.</p>
+        </div>
+
+        <div class="quiz-card">
+          <div class="quiz-header-bar">
+            <span class="quiz-step-count" id="quiz-question-idx">Сұрақ 01 / 10</span>
+            <span class="quiz-score-badge" id="quiz-score-display">Ұпай: 0 / 10</span>
+          </div>
+
+          <div class="quiz-question-text" id="quiz-question-title">
+            1796 жылы Эдвард Дженнер шешек вакцинасын кімнің қолындағы бөртпеден алып екті?
+          </div>
+
+          <div class="quiz-options-list" id="quiz-options-container">
+            <!-- Жауап нұсқалары JavaScript арқылы динамикалық түрде салынады -->
+          </div>
+
+          <div class="quiz-feedback-box" id="quiz-feedback">
+            <!-- Кері байланыс -->
+          </div>
+
+          <div style="display: flex; justify-content: flex-end;">
+            <button class="nav-arrow-btn" id="btn-quiz-next" style="display: none;">
+              Келесі сұрақ
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== СЛАЙД 14: БАҚЫЛАУ СҰРАҚТАРЫ МЕН АКАДЕМИЯЛЫҚ ЖАУАПТАРЫ ==================== -->
+      <section class="slide-item" data-slide="14">
+        <div class="slide-meta-row">
+          <span class="slide-topic-badge">13-бөлім • Бақылау Сұрақтары</span>
+          <span class="slide-number-indicator">Слайд 14 / 15</span>
+        </div>
+        <div class="slide-header">
+          <h2 class="slide-title">Дәрістік бақылау сұрақтары және <span class="highlight">Ғылыми Жауаптары</span></h2>
+          <p class="slide-sub">Оқытушы мен емтихан қабылдаушыларға арналған толыққанды академиялық дәлелдер.</p>
+        </div>
+
+        <div class="accordion-list">
+          <!-- 1-сұрақ -->
+          <div class="accordion-item open">
+            <div class="accordion-header">
+              <span>1. XIX-XX ғғ. әлемдік медицина дамуына қандай факторлар әсер етті?</span>
+              <svg class="acc-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="accordion-body">
+              <strong>Жауабы:</strong> Басты факторлар: 1) Өнеркәсіптік революция мен қалалардың жедел өсуі, адамдардың тығыз орналасуы және антисанитария; 2) Холера, оба сияқты пандемиялардың таралуы; 3) Жаратылыстану ғылымдарындағы жасушалық және эволюциялық теориялардың қалыптасуы; 4) Телеграф пен радионың шығуы (3-ақпараттық төңкеріс); 5) Бактериологиялық зертханалар мен микроскоптық құралдардың жетілуі.
+            </div>
+          </div>
+
+          <!-- 2-сұрақ -->
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>2. Қоғамдық медицина және мемлекеттік денсаулық сақтау идеясы деп нені айтады?</span>
+              <svg class="acc-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="accordion-body">
+              <strong>Жауабы:</strong> Бұл тек ауырған жеке адамды емдеуден гөрі, бүкіл халықтың денсаулығын қорғауды мемлекеттік саясат деңгейіне көтеру. Оған ауыз су мен кәрізді тазарту, санитарлық заңдар қабылдау, карантиндік шектеулер, эпидемиологиялық статистика жүргізу және жаппай тегін екпе егу жұмыстары жатады.
+            </div>
+          </div>
+
+          <!-- 3-сұрақ -->
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>3. XIX-ХХ ғасыр медицинасының негізгі жетістіктеріне қандай жаңалықтарды атауға болады?</span>
+              <svg class="acc-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="accordion-body">
+              <strong>Жауабы:</strong> Шешекке қарсы сиыр шешегін егу (Дженнер), микроорганизмдердің инфекция тудыратынын дәлелдеу және сібір жарасы мен құтыруға қарсы вакциналар (Пастер), туберкулез бен холера қоздырғыштарын ашу және туберкулин сынамасы (Кох), педиатрияның жеке сала ретінде бөлінуі және психиатрияда шынжырларды шешіп, гуманды емдеуге көшу (Пинель).
+            </div>
+          </div>
+
+          <!-- 4-сұрақ -->
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>4. Жұқпалы аурулармен күрес және олардың алдын алу бойынша қандай жаңалықтар ашылды?</span>
+              <svg class="acc-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="accordion-body">
+              <strong>Жауабы:</strong> «Иммунитет» ұғымы ғылыми негізделді. Патогендерді жоғары температурада (+42-43°C) өсіру арқылы олардың вируленттілігін (уыттылығын) әлсіретіп, организмге қауіпсіз егу арқылы қорғаныш антиденелерін түзу әдісі табылды. Сондай-ақ егу материалын кептіріп, шыны ампулада тасымалдау жолы ашылды.
+            </div>
+          </div>
+
+          <!-- 5-сұрақ -->
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>5. Шешек, күйдіргі (сібір жарасы) сияқты қауіпті аурулар қалай ауыздықталды?</span>
+              <svg class="acc-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="accordion-body">
+              <strong>Жауабы:</strong> Шешекке қарсы сиыр шешегінің зақымдану ошағынан алынған лимфаны балаларға егу (вакцинация) жаппай жүргізілді. Күйдіргіге қарсы 1881 жылы Пастер жасақтаған термо-әлсіретілген Bacilla anthracici вакцинасы 1894 жылға қарай 3.5 миллионнан астам ірі қара малға егіліп, ауру ошақтары толықтай оқшауланды.
+            </div>
+          </div>
+
+          <!-- 6-сұрақ -->
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>6. Осы кезеңде балалар ауруы мен психикалық аурулар туралы қандай көзқарастар қалыптасты?</span>
+              <svg class="acc-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="accordion-body">
+              <strong>Жауабы:</strong> Бала организмінің ересектерден өзгеше анатомиялық-физиологиялық даму заңдылықтары мойындалып, рахит пен балалар инфекциялары жүйеленіп, арнайы балалар ауруханалары ашылды. Ал психиатрияда мистикалық-жындылық көзқарас жойылып, аурулардың ми зақымынан, ұзақ стресстен туындайтын органикалық сипаты дәлелденді және науқастарға гуманды көзқараспен дәрілік әрі психотерапиялық ем ұсынылды.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== СЛАЙД 15: ГЛОССАРИЙ ЖӘНЕ ҚОРЫТЫНДЫ ==================== -->
+      <section class="slide-item" data-slide="15">
+        <div class="slide-meta-row">
+          <span class="slide-topic-badge">14-бөлім • Әдебиеттер & Глоссарий</span>
+          <span class="slide-number-indicator">Слайд 15 / 15</span>
+        </div>
+        <div class="slide-header">
+          <h2 class="slide-title">Терминдер Глоссарийі, <span class="highlight">Әдебиеттер & Авторлар</span></h2>
+          <p class="slide-sub">Қазақстан-Ресей Медициналық Университеті • 107Б Жалпы медицина тобының қорытындысы.</p>
+        </div>
+
+        <div class="content-grid-2">
+          <!-- Глоссарий -->
+          <div class="glass-card">
+            <div class="card-glow-edge"></div>
+            <h3 class="card-title">Негізгі Медициналық Терминдер</h3>
+            <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 10px;">
+              <div style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; font-size: 12.5px;">
+                <strong style="color: var(--primary);">Вариоляция (variolatio):</strong> Нағыз қара шешек бөртпесінен алынған сұйықтықты сау адамның терісіне жасанды жұқтырудың көне әдісі.
+              </div>
+              <div style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; font-size: 12.5px;">
+                <strong style="color: var(--secondary);">Вакцинация (vaccinatio):</strong> Сиыр шешегін (лат. vacca - сиыр) қолдану арқылы адамда қауіпсіз жасанды иммунитет қалыптастыру әдісі.
+              </div>
+              <div style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; font-size: 12.5px;">
+                <strong style="color: var(--accent);">Вируленттілік:</strong> Патогенді микроорганизмнің адам немесе жануар организміне еніп, ауру тудыру және уландыру дәрежесі.
+              </div>
+              <div style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; font-size: 12.5px;">
+                <strong style="color: var(--purple);">Туберкулин:</strong> Роберт Кох алған туберкулез микобактериясының глицеринді сүзіндісі; бүгінгі Манту сынамасының негізі.
+              </div>
+            </div>
+          </div>
+
+          <!-- Әдебиеттер және команда -->
+          <div class="glass-card emerald">
+            <div class="card-glow-edge"></div>
+            <h3 class="card-title">Пайдаланылған Әдебиеттер Тізімі</h3>
+            <ol style="padding-left: 20px; font-size: 12px; color: var(--text-muted); display: flex; flex-direction: column; gap: 6px; margin-top: 8px;">
+              <li>Биғалиева Р. Бүкіләлемдік медицина тарихы. Оқулық / Р.Қ. Биғалиева. – Алматы, 2009. – 464 б.</li>
+              <li>Сорокина Т.С. История медицины: Учебник. – 2-е изд. / Т.С. Сорокина. – М.: ПАИМС, 1994. – 384 c.</li>
+              <li>Лисицын Ю.П. История медицины: учебник / Ю.П. Лисицын. – М.: ГЭОТАР-Медиа, 2022. – 400 c.</li>
+              <li>Симонян Р.З. История медицины: со времен первобытного общества до настоящего времени. – М.: Ай Пи Ар Медиа, 2022. – 307 с.</li>
+            </ol>
+
+            <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 12px; margin-top: 16px; border: 1px solid var(--border-light);">
+              <div style="font-size: 11px; color: var(--primary); font-family: 'JetBrains Mono'; text-transform: uppercase;">Орындағандар:</div>
+              <div style="font-size: 14px; font-weight: 700; color: #fff; margin-top: 4px;">
+                Накипов Әділжан • Аханай Ернұр • Серік Мерей
+              </div>
+              <div style="font-size: 12px; color: var(--text-muted); margin-top: 2px;">
+                Қазақстан-Ресей Медициналық Университеті | 107Б тобы
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 10px; margin-top: 14px;">
+              <button class="nav-arrow-btn" onclick="window.print()" style="flex: 1; justify-content: center;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                PDF / Басып шығару
+              </button>
+              <button class="nav-arrow-btn" onclick="app.goToSlide(1)" style="flex: 1; justify-content: center; background: var(--primary); color: #050b14;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                Қайта бастау
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Bottom Presentation Footer Controller Bar -->
+  <footer class="presentation-footer">
+    <div class="footer-left">
+      <button class="nav-arrow-btn" id="btn-prev-slide" title="Алдыңғы слайд (←)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        Алдыңғы
+      </button>
+
+      <button class="nav-arrow-btn" id="btn-next-slide" title="Келесі слайд (→ / Space)">
+        Келесі
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+    <div class="footer-center">
+      <div class="slide-dots-wrap" id="dots-container">
+        <!-- 15 нүкте динамикалық түрде генерацияланады -->
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-subtle);">
+        ← / → немесе Бос орын
+      </span>
+    </div>
+  </footer>
+
+  <!-- Drawer (Table of contents) overlay -->
+  <div class="drawer-overlay" id="drawer-overlay">
+    <div class="drawer-sidebar">
+      <div class="drawer-header">
+        <h3 style="font-size: 16px; font-weight: 700; color: #fff;">Слайдтар Мазмұны</h3>
+        <button class="icon-btn" id="btn-close-drawer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="drawer-list" id="drawer-list-container">
+        <!-- Тізім динамикалық түрде толтырылады -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Audio Synthesis & Application Engine -->
+  <script>
+    /**
+     * Web Audio API Synthesizer (Zero external dependencies)
+     */
+    class MedicalAudioSynth {
+      constructor() {
+        this.ctx = null;
+        this.soundEnabled = true;
+      }
+
+      init() {
+        if (!this.ctx) {
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+          if (AudioContext) {
+            this.ctx = new AudioContext();
+          }
+        }
+      }
+
+      playSlideChirp() {
+        if (!this.soundEnabled) return;
+        this.init();
+        if (!this.ctx) return;
+        try {
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(520, this.ctx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(840, this.ctx.currentTime + 0.08);
+          gain.gain.setValueAtTime(0.04, this.ctx.currentTime);
+          gain.gain.linearRampToValueAtTime(0.001, this.ctx.currentTime + 0.08);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start();
+          osc.stop(this.ctx.currentTime + 0.09);
+        } catch (e) {}
+      }
+
+      playSuccess() {
+        if (!this.soundEnabled) return;
+        this.init();
+        if (!this.ctx) return;
+        try {
+          const now = this.ctx.currentTime;
+          [523.25, 659.25, 783.99, 1046.50].forEach((freq, i) => {
+            const osc = this.ctx.createOscillator();
+            const gain = this.ctx.createGain();
+            osc.frequency.value = freq;
+            gain.gain.setValueAtTime(0.03, now + i * 0.07);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.07 + 0.22);
+            osc.connect(gain);
+            gain.connect(this.ctx.destination);
+            osc.start(now + i * 0.07);
+            osc.stop(now + i * 0.07 + 0.25);
+          });
+        } catch (e) {}
+      }
+
+      playWrong() {
+        if (!this.soundEnabled) return;
+        this.init();
+        if (!this.ctx) return;
+        try {
+          const now = this.ctx.currentTime;
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(240, now);
+          osc.frequency.exponentialRampToValueAtTime(140, now + 0.18);
+          gain.gain.setValueAtTime(0.05, now);
+          gain.gain.linearRampToValueAtTime(0.001, now + 0.18);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start(now);
+          osc.stop(now + 0.19);
+        } catch (e) {}
+      }
+    }
+
+    /**
+     * Confetti Particle Engine
+     */
+    class ConfettiCannon {
+      constructor() {
+        this.canvas = document.getElementById('confetti-canvas');
+        this.ctx = this.canvas.getContext('2d');
+        this.particles = [];
+        this.resize();
+        window.addEventListener('resize', () => this.resize());
+      }
+
+      resize() {
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
+      }
+
+      launch() {
+        this.particles = [];
+        const colors = ['#00d2ff', '#10b981', '#f59e0b', '#f43f5e', '#8b5cf6', '#ffffff'];
+        for (let i = 0; i < 90; i++) {
+          this.particles.push({
+            x: window.innerWidth / 2,
+            y: window.innerHeight / 2,
+            vx: (Math.random() - 0.5) * 18,
+            vy: (Math.random() - 0.7) * 18,
+            size: Math.random() * 8 + 4,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            rotation: Math.random() * 360,
+            rotationSpeed: (Math.random() - 0.5) * 12,
+            alpha: 1
+          });
+        }
+        this.render();
+      }
+
+      render() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        let active = false;
+        for (let p of this.particles) {
+          p.x += p.vx;
+          p.y += p.vy;
+          p.vy += 0.35; // Gravity
+          p.vx *= 0.98;
+          p.rotation += p.rotationSpeed;
+          p.alpha -= 0.012;
+
+          if (p.alpha > 0) {
+            active = true;
+            this.ctx.save();
+            this.ctx.translate(p.x, p.y);
+            this.ctx.rotate((p.rotation * Math.PI) / 180);
+            this.ctx.globalAlpha = p.alpha;
+            this.ctx.fillStyle = p.color;
+            this.ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 1.5);
+            this.ctx.restore();
+          }
+        }
+        if (active) {
+          requestAnimationFrame(() => this.render());
+        } else {
+          this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        }
+      }
+    }
+
+    /**
+     * Background Bio Canvas Particles Animation
+     */
+    class BioBackgroundCanvas {
+      constructor() {
+        this.canvas = document.getElementById('bio-canvas');
+        this.ctx = this.canvas.getContext('2d');
+        this.cells = [];
+        this.mouseX = window.innerWidth / 2;
+        this.mouseY = window.innerHeight / 2;
+        this.init();
+      }
+
+      init() {
+        this.resize();
+        window.addEventListener('resize', () => this.resize());
+        window.addEventListener('mousemove', (e) => {
+          this.mouseX = e.clientX;
+          this.mouseY = e.clientY;
+        });
+
+        const count = Math.min(35, Math.floor(window.innerWidth / 40));
+        for (let i = 0; i < count; i++) {
+          this.cells.push({
+            x: Math.random() * this.canvas.width,
+            y: Math.random() * this.canvas.height,
+            r: Math.random() * 22 + 6,
+            dx: (Math.random() - 0.5) * 0.45,
+            dy: (Math.random() - 0.5) * 0.45,
+            hue: Math.random() > 0.5 ? 190 : 160,
+            pulse: Math.random() * Math.PI * 2
+          });
+        }
+        this.animate();
+      }
+
+      resize() {
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
+      }
+
+      animate() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        for (let i = 0; i < this.cells.length; i++) {
+          const c = this.cells[i];
+          c.x += c.dx;
+          c.y += c.dy;
+          c.pulse += 0.02;
+
+          if (c.x < -40) c.x = this.canvas.width + 40;
+          if (c.x > this.canvas.width + 40) c.x = -40;
+          if (c.y < -40) c.y = this.canvas.height + 40;
+          if (c.y > this.canvas.height + 40) c.y = -40;
+
+          const r = c.r + Math.sin(c.pulse) * 3;
+          const grad = this.ctx.createRadialGradient(c.x, c.y, 0, c.x, c.y, r);
+          grad.addColorStop(0, `hsla(${c.hue}, 90%, 60%, 0.14)`);
+          grad.addColorStop(0.7, `hsla(${c.hue}, 80%, 50%, 0.04)`);
+          grad.addColorStop(1, 'transparent');
+
+          this.ctx.beginPath();
+          this.ctx.arc(c.x, c.y, r, 0, Math.PI * 2);
+          this.ctx.fillStyle = grad;
+          this.ctx.fill();
+
+          // Connect nearby cells
+          for (let j = i + 1; j < this.cells.length; j++) {
+            const c2 = this.cells[j];
+            const dist = Math.hypot(c.x - c2.x, c.y - c2.y);
+            if (dist < 140) {
+              this.ctx.beginPath();
+              this.ctx.moveTo(c.x, c.y);
+              this.ctx.lineTo(c2.x, c2.y);
+              this.ctx.strokeStyle = `rgba(0, 210, 255, ${(1 - dist / 140) * 0.08})`;
+              this.ctx.lineWidth = 1;
+              this.ctx.stroke();
+            }
+          }
+        }
+        requestAnimationFrame(() => this.animate());
+      }
+    }
+
+    /**
+     * Presentation Main Application Controller
+     */
+    class PresentationApp {
+      constructor() {
+        this.slides = Array.from(document.querySelectorAll('.slide-item'));
+        this.totalSlides = this.slides.length;
+        this.currentSlide = 1;
+        this.isScrollMode = false;
+        
+        this.audio = new MedicalAudioSynth();
+        this.confetti = new ConfettiCannon();
+        this.bioCanvas = new BioBackgroundCanvas();
+
+        // Speaker Timer
+        this.timerSeconds = 0;
+        this.timerInterval = null;
+        this.timerRunning = true;
+
+        this.init();
+      }
+
+      init() {
+        document.getElementById('total-slides-num').innerText = String(this.totalSlides).padStart(2, '0');
+        this.setupDots();
+        this.setupDrawer();
+        this.setupEventListeners();
+        this.startTimer();
+        this.setupSimulators();
+        this.setupQuiz();
+        this.setupAccordions();
+        this.setup3DTilt();
+        this.updateSlide(1, false);
+      }
+
+      setupDots() {
+        const dotsWrap = document.getElementById('dots-container');
+        dotsWrap.innerHTML = '';
+        for (let i = 1; i <= this.totalSlides; i++) {
+          const dot = document.createElement('div');
+          dot.className = `slide-dot ${i === 1 ? 'active' : ''}`;
+          dot.title = `Слайд ${i}`;
+          dot.addEventListener('click', () => this.goToSlide(i));
+          dotsWrap.appendChild(dot);
+        }
+      }
+
+      setupDrawer() {
+        const listWrap = document.getElementById('drawer-list-container');
+        listWrap.innerHTML = '';
+        this.slides.forEach((slide, idx) => {
+          const slideNum = idx + 1;
+          const titleEl = slide.querySelector('.slide-title');
+          const titleText = titleEl ? titleEl.innerText.replace(/[\n\r]+/g, ' ').trim() : `Слайд ${slideNum}`;
+          
+          const item = document.createElement('div');
+          item.className = `drawer-item ${slideNum === 1 ? 'active' : ''}`;
+          item.innerHTML = `
+            <span class="drawer-item-idx">${String(slideNum).padStart(2, '0')}</span>
+            <span class="drawer-item-title">${titleText}</span>
+          `;
+          item.addEventListener('click', () => {
+            this.goToSlide(slideNum);
+            this.closeDrawer();
+          });
+          listWrap.appendChild(item);
+        });
+      }
+
+      setupEventListeners() {
+        // Nav Buttons
+        document.getElementById('btn-prev-slide').addEventListener('click', () => this.prevSlide());
+        document.getElementById('btn-next-slide').addEventListener('click', () => this.nextSlide());
+        document.getElementById('btn-start-presentation').addEventListener('click', () => this.nextSlide());
+        document.getElementById('btn-hero-explore').addEventListener('click', () => this.goToSlide(2));
+
+        // Keyboard Navigation
+        window.addEventListener('keydown', (e) => {
+          if (this.isScrollMode) return;
+          if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+            e.preventDefault();
+            this.nextSlide();
+          } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            e.preventDefault();
+            this.prevSlide();
+          } else if (e.key === 'Home') {
+            e.preventDefault();
+            this.goToSlide(1);
+          } else if (e.key === 'End') {
+            e.preventDefault();
+            this.goToSlide(this.totalSlides);
+          } else if (e.key === 'Escape') {
+            this.closeDrawer();
+          }
+        });
+
+        // Touch Swipe
+        let touchStartX = 0;
+        let touchEndX = 0;
+        window.addEventListener('touchstart', (e) => {
+          touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        window.addEventListener('touchend', (e) => {
+          touchEndX = e.changedTouches[0].screenX;
+          if (touchStartX - touchEndX > 50) this.nextSlide();
+          if (touchEndX - touchStartX > 50) this.prevSlide();
+        }, { passive: true });
+
+        // Drawer
+        document.getElementById('btn-open-drawer').addEventListener('click', () => this.openDrawer());
+        document.getElementById('btn-close-drawer').addEventListener('click', () => this.closeDrawer());
+        document.getElementById('drawer-overlay').addEventListener('click', (e) => {
+          if (e.target.id === 'drawer-overlay') this.closeDrawer();
+        });
+
+        // Fullscreen
+        document.getElementById('btn-fullscreen').addEventListener('click', () => {
+          if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen().catch(() => {});
+          } else {
+            document.exitFullscreen().catch(() => {});
+          }
+        });
+
+        // Sound Toggle
+        const btnSound = document.getElementById('btn-toggle-sound');
+        btnSound.addEventListener('click', () => {
+          this.audio.soundEnabled = !this.audio.soundEnabled;
+          btnSound.classList.toggle('active', this.audio.soundEnabled);
+          btnSound.style.opacity = this.audio.soundEnabled ? '1' : '0.4';
+        });
+
+        // Mode Switch (Presentation vs Scroll)
+        document.getElementById('btn-toggle-mode').addEventListener('click', () => {
+          this.isScrollMode = !this.isScrollMode;
+          document.body.classList.toggle('scroll-mode', this.isScrollMode);
+          document.body.classList.toggle('presentation-mode', !this.isScrollMode);
+          document.getElementById('mode-label').innerText = this.isScrollMode ? 'Слайд режимі' : 'Шолу режимі';
+          if (!this.isScrollMode) {
+            this.updateSlide(this.currentSlide, false);
+          }
+        });
+
+        // Speaker Timer Toggle
+        document.getElementById('speaker-timer').addEventListener('click', () => {
+          this.timerRunning = !this.timerRunning;
+          document.getElementById('speaker-timer').style.opacity = this.timerRunning ? '1' : '0.5';
+        });
+      }
+
+      startTimer() {
+        this.timerInterval = setInterval(() => {
+          if (!this.timerRunning) return;
+          this.timerSeconds++;
+          const mins = Math.floor(this.timerSeconds / 60);
+          const secs = this.timerSeconds % 60;
+          document.getElementById('timer-display').innerText = 
+            `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+        }, 1000);
+      }
+
+      openDrawer() {
+        document.getElementById('drawer-overlay').classList.add('open');
+      }
+
+      closeDrawer() {
+        document.getElementById('drawer-overlay').classList.remove('open');
+      }
+
+      goToSlide(idx) {
+        if (idx < 1 || idx > this.totalSlides) return;
+        this.currentSlide = idx;
+        this.updateSlide(this.currentSlide, true);
+      }
+
+      nextSlide() {
+        if (this.currentSlide < this.totalSlides) {
+          this.currentSlide++;
+          this.updateSlide(this.currentSlide, true);
+        }
+      }
+
+      prevSlide() {
+        if (this.currentSlide > 1) {
+          this.currentSlide--;
+          this.updateSlide(this.currentSlide, true);
+        }
+      }
+
+      updateSlide(index, playSound = true) {
+        if (playSound) this.audio.playSlideChirp();
+
+        this.slides.forEach((s, i) => {
+          const slideNum = i + 1;
+          s.classList.remove('active', 'prev');
+          if (slideNum === index) {
+            s.classList.add('active');
+            s.scrollTop = 0;
+          } else if (slideNum < index) {
+            s.classList.add('prev');
+          }
+        });
+
+        // Update indicators
+        document.getElementById('current-slide-num').innerText = String(index).padStart(2, '0');
+        const progressPct = ((index - 1) / (this.totalSlides - 1)) * 100;
+        document.getElementById('main-progress').style.width = `${Math.max(5, progressPct)}%`;
+
+        // Update Dots
+        const dots = document.querySelectorAll('.slide-dot');
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i + 1 === index);
+        });
+
+        // Update Drawer active item
+        const drawerItems = document.querySelectorAll('.drawer-item');
+        drawerItems.forEach((item, i) => {
+          item.classList.toggle('active', i + 1 === index);
+        });
+
+        // Nav Buttons State
+        document.getElementById('btn-prev-slide').disabled = index === 1;
+        document.getElementById('btn-next-slide').disabled = index === this.totalSlides;
+      }
+
+      setupSimulators() {
+        // Pasteur Simulator
+        const range = document.getElementById('pasteur-temp-range');
+        const display = document.getElementById('temp-display');
+        const badge = document.getElementById('sim-badge');
+        const text = document.getElementById('sim-text');
+
+        if (range) {
+          range.addEventListener('input', (e) => {
+            const val = parseFloat(e.target.value);
+            display.innerText = `+${val.toFixed(1)} °C`;
+
+            if (val < 41) {
+              badge.innerText = 'ҚАУІПТІ УЫТТЫ ҚОЗДЫРҒЫШ';
+              badge.style.background = '#f43f5e';
+              badge.style.color = '#fff';
+              text.innerText = `${val.toFixed(1)}°C кезінде сібір жарасының Bacillus anthracis бактериясы аса қауіпті әрі өлімге әкеледі. Вакцинаға жарамайды!`;
+            } else if (val >= 41 && val <= 44) {
+              badge.innerText = 'ӘЛСІРЕТІЛГЕН ВАКЦИНА (ПАСТЕР ӘДІСІ)';
+              badge.style.background = '#00d2ff';
+              badge.style.color = '#050b14';
+              text.innerText = `+42-43°C аралығында 2-8 күнде қоздырғыштың вируленттілігі төмендеп, өмірлік иммунитет түзетін қауіпсіз вакцина алынады! (1881 ж.)`;
+            } else {
+              badge.innerText = 'БАКТЕРИЯ ТОЛЫҚ ӨЛДІ';
+              badge.style.background = '#f59e0b';
+              badge.style.color = '#050b14';
+              text.innerText = `Температура тым жоғары болғандықтан патоген толық денатурацияға ұшырап өледі, алайда иммуногендік қасиеті нашарлауы мүмкін.`;
+            }
+          });
+        }
+
+        // Pinel Reform Toggle
+        const btnNew = document.getElementById('btn-reform-new');
+        const btnOld = document.getElementById('btn-reform-old');
+        const rTitle = document.getElementById('reform-title');
+        const rDesc = document.getElementById('reform-desc');
+        const rList = document.getElementById('reform-list');
+
+        if (btnNew && btnOld) {
+          btnNew.addEventListener('click', () => {
+            btnNew.classList.add('active');
+            btnOld.classList.remove('active');
+            rTitle.innerText = 'Филипп Пинель және Жан-Этьен Эскироль';
+            rTitle.style.color = 'var(--primary)';
+            rDesc.innerText = '1793-1795 жылдары Париждегі Бисетр және Сальпетриер ауруханаларында Филипп Пинель науқастардың мойнындағы темір шынжырларды шешіп, емдеуге адамгершілік (моральдық) пен мейірімділік қағидасын енгізді.';
+            rList.innerHTML = `
+              <li class="card-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Табиғи-биологиялық себептер:</strong> Ауру тылсым жын-шайтаннан емес, вегетативтік жүйке жүйесі мен ми зақымдануынан пайда болады.</span>
+              </li>
+              <li class="card-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Кешенді ем:</strong> Ұзақ стресс пен күйзелісті емдік шаралармен, психотерапиямен және химиялық/өсімдік дәрілерімен емдеу.</span>
+              </li>
+              <li class="card-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>В.М. Бехтерев мектебі:</strong> Психоневрологиялық институт негізінде клиникалық психопатологияны қалыптастырды.</span>
+              </li>
+            `;
+          });
+
+          btnOld.addEventListener('click', () => {
+            btnOld.classList.add('active');
+            btnNew.classList.remove('active');
+            rTitle.innerText = 'Орта ғасырлық және XVIII ғасырға дейінгі қараңғылық';
+            rTitle.style.color = 'var(--crimson)';
+            rDesc.innerText = 'Психикалық сырқатқа шалдыққан жандарды қоғамнан оқшаулап, қараңғы жертөлелерде шынжырлап ұстайтын. Оларды «шайтан немесе жын қаққан, күнәһар» деп есептеп, емдеудің орнына қатыгез азаптау әдістерін қолданды.';
+            rList.innerHTML = `
+              <li class="card-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--crimson);"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                <span><strong>Темір шынжырлар мен бұғаулар:</strong> Науқастарды қабырғаға байлап, қозғалу құқығынан айырды.</span>
+              </li>
+              <li class="card-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--crimson);"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                <span><strong>Мистикалық көзқарас:</strong> Аурудың биологиялық табиғаты түсіндірілмеді, медициналық көмек көрсетілмеді.</span>
+              </li>
+            `;
+          });
+        }
+      }
+
+      setupQuiz() {
+        const questions = [
+          {
+            q: "1796 жылы Эдвард Дженнер шешек вакцинасын кімнің қолындағы бөртпеден алды?",
+            options: [
+              "Сара Нельме (сиыр шешегімен ауырған сауыншы)",
+              "Джеймс Фиппс (8 жасар бала)",
+              "Луи Пастердің зертханашысы",
+              "Роберт Кохтың науқасы"
+            ],
+            correct: 0,
+            rationale: "Дұрыс! Э. Дженнер сауыншы Сара Нельменің қолындағы сиыр шешегі пустуласынан лимфа алып, Джеймс Фиппске екті."
+          },
+          {
+            q: "1796 жылғы 14 мамырдағы тарихи экспериментке қатысқан 8 жасар бала кім?",
+            options: [
+              "Жозеф Мейстер",
+              "Джеймс Фиппс",
+              "Томас Сиденхэм",
+              "Фрэнсис Глиссон"
+            ],
+            correct: 1,
+            rationale: "Дұрыс! 8 жасар Джеймс Фиппс егілгеннен кейін қара шешекке қарсы толық иммунитетке ие болды."
+          },
+          {
+            q: "Луи Пастер сібір жарасы қоздырғышын қандай температурада қыздырып әлсіретті?",
+            options: [
+              "+30-32 °C",
+              "+36.6 °C",
+              "+42-43 °C",
+              "+100 °C"
+            ],
+            correct: 2,
+            rationale: "Дұрыс! Пастер +42-43°C аралығында қыздыру арқылы Bacilla anthracici вируленттілігін әлсіретті."
+          },
+          {
+            q: "Туберкулез қоздырғышын Роберт Кох қай жылы ашты?",
+            options: [
+              "1796 ж.",
+              "1882 ж. 24 наурыз",
+              "1905 ж.",
+              "1913 ж."
+            ],
+            correct: 1,
+            rationale: "Дұрыс! 1882 жылғы 24 наурызда Роберт Кох туберкулез бактериясын («Кох таяқшасы») ашты."
+          },
+          {
+            q: "Роберт Кох Нобель сыйлығымен қай жылы марапатталды?",
+            options: [
+              "1895 ж.",
+              "1900 ж.",
+              "1905 ж.",
+              "1914 ж."
+            ],
+            correct: 2,
+            rationale: "Дұрыс! «Туберкулезді зерттеу және ашқаны үшін» Р. Кох 1905 жылы Нобель сыйлығын алды."
+          },
+          {
+            q: "Психиатрияда науқастарды шынжырдан босатып, гуманды емдеуді ұсынған кім?",
+            options: [
+              "Филипп Пинель",
+              "Карл Рот",
+              "Рудольф Вирхов",
+              "И.П. Павлов"
+            ],
+            correct: 0,
+            rationale: "Дұрыс! Филипп Пинель 1793-1795 жылдары психикалық науқастардың шынжырын шешіп, емдеуде төңкеріс жасады."
+          },
+          {
+            q: "Балалардағы рахит (мешел) ауруын 1650 жылдары алғаш сипаттаған ағылшын дәрігері?",
+            options: [
+              "Фрэнсис Глиссон",
+              "Эдвард Дженнер",
+              "Жан-Жак Руссо",
+              "Абу Кавази"
+            ],
+            correct: 0,
+            rationale: "Дұрыс! Фрэнсис Глиссон 1650 жылы рахит ауруы мен сүйек жүйесінің бұзылуын сипаттады."
+          },
+          {
+            q: "Дүние жүзіндегі ең алғашқы балалар ауруханасы қай жылы және қай қалада ашылды?",
+            options: [
+              "1745 ж. Париж («Hôpital des Enfants Malades»)",
+              "1769 ж. Лондон",
+              "1890 ж. Санкт-Петербург",
+              "1910 ж. Берлин"
+            ],
+            correct: 0,
+            rationale: "Дұрыс! 1745 жылы Парижде «Hôpital des Enfants Malades» аталған 1-ші балалар емханасы ашылды."
+          },
+          {
+            q: "XX ғасыр басында Ресейде 1 дәрігерге қанша тұрғыннан келетін?",
+            options: [
+              "500 тұрғын",
+              "2000 тұрғын",
+              "7000-нан астам тұрғын",
+              "20 000 тұрғын"
+            ],
+            correct: 2,
+            rationale: "Дұрыс! 1913 жылға қарай Ресейде 1 дәрігерге 7 мыңнан астам тұрғын келді (Германияда 1:2000)."
+          },
+          {
+            q: "«Вакцинация» сөзі латынның қай сөзінен шыққан?",
+            options: [
+              "Variola (шешек)",
+              "Vacca (сиыр)",
+              "Immunitas (босату)",
+              "Virus (у)"
+            ],
+            correct: 1,
+            rationale: "Дұрыс! Vacca — сиыр дегенді білдіреді (variolae vaccinae — сиыр шешегі)."
+          }
+        ];
+
+        let curQ = 0;
+        let score = 0;
+
+        const qIdxEl = document.getElementById('quiz-question-idx');
+        const qTitleEl = document.getElementById('quiz-question-title');
+        const optWrap = document.getElementById('quiz-options-container');
+        const scoreEl = document.getElementById('quiz-score-display');
+        const feedbackEl = document.getElementById('quiz-feedback');
+        const nextBtn = document.getElementById('btn-quiz-next');
+
+        const renderQuestion = () => {
+          const item = questions[curQ];
+          qIdxEl.innerText = `Сұрақ ${String(curQ + 1).padStart(2, '0')} / ${questions.length}`;
+          qTitleEl.innerText = item.q;
+          feedbackEl.className = 'quiz-feedback-box';
+          feedbackEl.innerText = '';
+          nextBtn.style.display = 'none';
+          optWrap.innerHTML = '';
+
+          item.options.forEach((optText, optIdx) => {
+            const btn = document.createElement('button');
+            btn.className = 'quiz-opt-btn';
+            btn.innerHTML = `
+              <span style="font-family: 'JetBrains Mono'; color: var(--primary); font-weight: 700;">${['A', 'B', 'C', 'D'][optIdx]}.</span>
+              <span>${optText}</span>
+            `;
+            btn.addEventListener('click', () => {
+              // Check answer
+              const isCorrect = optIdx === item.correct;
+              const allBtns = optWrap.querySelectorAll('.quiz-opt-btn');
+              allBtns.forEach(b => b.disabled = true);
+
+              if (isCorrect) {
+                btn.classList.add('correct');
+                score++;
+                scoreEl.innerText = `Ұпай: ${score} / ${questions.length}`;
+                this.audio.playSuccess();
+                feedbackEl.innerHTML = `✅ <strong>Өте тамаша!</strong> ${item.rationale}`;
+                feedbackEl.style.borderColor = 'rgba(16, 185, 129, 0.4)';
+              } else {
+                btn.classList.add('wrong');
+                allBtns[item.correct].classList.add('correct');
+                this.audio.playWrong();
+                feedbackEl.innerHTML = `❌ <strong>Қате!</strong> Дұрыс жауабы: <em>${item.options[item.correct]}</em>. ${item.rationale}`;
+                feedbackEl.style.borderColor = 'rgba(244, 63, 94, 0.4)';
+              }
+
+              feedbackEl.classList.add('active');
+
+              if (curQ < questions.length - 1) {
+                nextBtn.innerText = 'Келесі сұрақ →';
+                nextBtn.style.display = 'inline-flex';
+              } else {
+                nextBtn.innerText = 'Нәтижені көру 🏆';
+                nextBtn.style.display = 'inline-flex';
+              }
+            });
+            optWrap.appendChild(btn);
+          });
+        };
+
+        nextBtn.addEventListener('click', () => {
+          if (curQ < questions.length - 1) {
+            curQ++;
+            renderQuestion();
+          } else {
+            // Finished
+            this.confetti.launch();
+            this.audio.playSuccess();
+            qTitleEl.innerHTML = `🎉 Викторина аяқталды! Сіздің қорытынды ұпайыңыз: <span style="color: var(--primary);">${score} / ${questions.length}</span> (${Math.round((score / questions.length) * 100)}%)`;
+            optWrap.innerHTML = `
+              <div style="grid-column: 1 / -1; text-align: center; padding: 24px;">
+                <div style="font-size: 48px; margin-bottom: 12px;">${score >= 8 ? '🎖️' : '📚'}</div>
+                <h3 style="font-size: 20px; color: #fff; margin-bottom: 8px;">
+                  ${score >= 8 ? 'Керемет нәтиже! Сіз дәрісті толық меңгердіңіз!' : 'Жақсы талпыныс! Слайдтарды қайталап шығуды ұсынамыз.'}
+                </h3>
+                <p style="color: var(--text-muted); font-size: 14px;">Қазақстан-Ресей Медициналық Университеті • 107Б тобы</p>
+                <button class="nav-arrow-btn" id="btn-restart-quiz" style="margin-top: 18px; display: inline-flex;">
+                  Қайта тапсыру
+                </button>
+              </div>
+            `;
+            feedbackEl.style.display = 'none';
+            nextBtn.style.display = 'none';
+
+            document.getElementById('btn-restart-quiz').addEventListener('click', () => {
+              curQ = 0;
+              score = 0;
+              scoreEl.innerText = `Ұпай: 0 / ${questions.length}`;
+              renderQuestion();
+            });
+          }
+        });
+
+        renderQuestion();
+      }
+
+      setupAccordions() {
+        const items = document.querySelectorAll('.accordion-item');
+        items.forEach(item => {
+          const header = item.querySelector('.accordion-header');
+          header.addEventListener('click', () => {
+            const isOpen = item.classList.contains('open');
+            items.forEach(i => i.classList.remove('open'));
+            if (!isOpen) {
+              item.classList.add('open');
+            }
+          });
+        });
+      }
+
+      setup3DTilt() {
+        const cards = document.querySelectorAll('.glass-card, .timeline-node-card');
+        cards.forEach(card => {
+          card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = ((y - centerY) / centerY) * -5;
+            const rotateY = ((x - centerX) / centerX) * 5;
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-2px)`;
+          });
+          card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+          });
+        });
+      }
+    }
+
+    // Initialize App
+    let app;
+    window.addEventListener('DOMContentLoaded', () => {
+      app = new PresentationApp();
+    });
+  </script>
+</body>
+</html>
