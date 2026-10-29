@@ -122,6 +122,34 @@
       gap: 14px;
     }
 
+    .brand-logo-crest {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #ffffff;
+      padding: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 16px var(--primary-glow);
+      flex-shrink: 0;
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      cursor: pointer;
+    }
+
+    .brand-logo-crest:hover {
+      transform: rotate(12deg) scale(1.12);
+      box-shadow: 0 0 24px var(--primary);
+    }
+
+    .brand-krmu-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 50%;
+      display: block;
+    }
+
     .brand-logo {
       width: 38px;
       height: 38px;
@@ -300,7 +328,7 @@
       margin: 0 auto;
     }
 
-    /* Single Slide */
+    /* Single Slide with 3D Page Flip */
     .slide-item {
       position: absolute;
       top: 0;
@@ -312,8 +340,9 @@
       flex-direction: column;
       opacity: 0;
       visibility: hidden;
-      transform: translateX(40px) scale(0.98);
-      transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.45s;
+      transform: perspective(1400px) rotateY(-10deg) translateX(45px) scale(0.96);
+      transform-origin: left center;
+      transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.5s;
       overflow-y: auto;
       overflow-x: hidden;
     }
@@ -321,12 +350,13 @@
     .slide-item.active {
       opacity: 1;
       visibility: visible;
-      transform: translateX(0) scale(1);
+      transform: perspective(1400px) rotateY(0deg) translateX(0) scale(1);
       z-index: 5;
     }
 
     .slide-item.prev {
-      transform: translateX(-40px) scale(0.98);
+      transform: perspective(1400px) rotateY(10deg) translateX(-45px) scale(0.96);
+      transform-origin: right center;
     }
 
     body.scroll-mode .slide-item {
@@ -444,7 +474,7 @@
       align-items: stretch;
     }
 
-    /* Glass Cards */
+    /* Glass Cards with 3D Page Turn & Hover Animation */
     .glass-card {
       background: var(--bg-card);
       border: 1px solid var(--border-light);
@@ -455,16 +485,18 @@
       box-shadow: var(--shadow-card);
       position: relative;
       overflow: hidden;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease, border-color 0.3s ease;
       display: flex;
       flex-direction: column;
+      transform-style: preserve-3d;
+      perspective: 1000px;
     }
 
     .glass-card:hover {
       background: var(--bg-card-hover);
       border-color: var(--border-accent);
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-card), 0 0 20px rgba(0, 210, 255, 0.15);
+      transform: perspective(1000px) translateY(-5px) rotateX(1.8deg) rotateY(-1.8deg) scale(1.01);
+      box-shadow: var(--shadow-card), 0 20px 45px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 210, 255, 0.22);
     }
 
     .card-glow-edge {
@@ -645,6 +677,91 @@
       position: relative;
     }
 
+    /* Hero KRMU Crest Card */
+    .hero-krmu-crest-card {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      padding: 8px 24px 8px 12px;
+      border-radius: 60px;
+      background: rgba(10, 22, 46, 0.78);
+      border: 1px solid rgba(0, 210, 255, 0.4);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65), 0 0 30px var(--primary-glow);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      margin-bottom: 24px;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+    }
+
+    .hero-krmu-crest-card:hover {
+      transform: translateY(-3px) scale(1.02);
+      border-color: var(--primary);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 45px var(--primary-glow);
+    }
+
+    .krmu-logo-wrapper {
+      position: relative;
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      border-radius: 50%;
+      padding: 4px;
+      box-shadow: 0 0 20px rgba(0, 210, 255, 0.6);
+      flex-shrink: 0;
+      animation: pulseLogoGlow 3s infinite ease-in-out;
+    }
+
+    @keyframes pulseLogoGlow {
+      0%, 100% { box-shadow: 0 0 16px rgba(0, 210, 255, 0.45); }
+      50% { box-shadow: 0 0 30px rgba(0, 210, 255, 0.85); }
+    }
+
+    .krmu-emblem-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 50%;
+      display: block;
+    }
+
+    .krmu-crest-text-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .krmu-pill-tag {
+      font-size: 13.5px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      color: #fff;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .krmu-tag-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 10px var(--primary);
+    }
+
+    .krmu-crest-subtitle {
+      font-size: 11.5px;
+      color: var(--primary);
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
     .hero-univ-badge {
       display: inline-flex;
       align-items: center;
@@ -690,14 +807,138 @@
       display: inline-block;
     }
 
-    /* Authors Banner */
+    /* 3D Flip Card Styles for Authors (Hover Перелистывание) */
     .authors-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
       width: 100%;
-      max-width: 900px;
+      max-width: 950px;
       margin-bottom: 34px;
+    }
+
+    .flip-card-wrapper {
+      perspective: 1200px;
+      width: 100%;
+      height: 105px;
+      cursor: pointer;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: left;
+      transition: transform 0.75s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transform-style: preserve-3d;
+      border-radius: var(--radius-md);
+    }
+
+    .flip-card-wrapper:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: var(--radius-md);
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .flip-card-front {
+      background: rgba(15, 27, 52, 0.75);
+      border: 1px solid var(--border-light);
+      padding: 16px 20px;
+      gap: 14px;
+      box-shadow: var(--shadow-card);
+      position: relative;
+    }
+
+    .flip-card-wrapper:hover .flip-card-front {
+      border-color: var(--primary);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px var(--primary-glow);
+    }
+
+    .flip-card-back {
+      background: linear-gradient(135deg, rgba(16, 35, 75, 0.95), rgba(7, 18, 42, 0.98));
+      border: 1px solid var(--primary);
+      padding: 14px 18px;
+      transform: rotateY(180deg);
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.8), 0 0 25px var(--primary-glow);
+    }
+
+    .flip-card-back.emerald {
+      border-color: var(--secondary);
+      background: linear-gradient(135deg, rgba(8, 45, 40, 0.95), rgba(5, 25, 25, 0.98));
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.8), 0 0 25px var(--secondary-glow);
+    }
+
+    .flip-card-back.amber {
+      border-color: var(--accent);
+      background: linear-gradient(135deg, rgba(50, 32, 10, 0.95), rgba(28, 16, 5, 0.98));
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.8), 0 0 25px var(--accent-glow);
+    }
+
+    .flip-role-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #050b14;
+      background: var(--primary);
+      padding: 3px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .flip-role-badge.emerald {
+      background: var(--secondary);
+      color: #050b14;
+    }
+
+    .flip-role-badge.amber {
+      background: var(--accent);
+      color: #050b14;
+    }
+
+    .flip-topic-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.3;
+    }
+
+    .flip-sub-info {
+      font-size: 11px;
+      color: #cbd5e1;
+      margin-top: 3px;
+    }
+
+    .flip-hint-icon {
+      margin-left: auto;
+      color: var(--primary);
+      opacity: 0.7;
+      transition: transform 0.6s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .flip-card-wrapper:hover .flip-hint-icon {
+      transform: rotate(180deg) scale(1.2);
+      opacity: 1;
     }
 
     .author-card {
@@ -808,15 +1049,16 @@
       border-radius: var(--radius-md);
       padding: 18px 16px;
       cursor: pointer;
-      transition: all 0.25s ease;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
       position: relative;
+      transform-style: preserve-3d;
     }
 
     .timeline-node-card:hover, .timeline-node-card.active {
       background: var(--bg-card-hover);
       border-color: var(--primary);
-      transform: translateY(-3px);
-      box-shadow: 0 0 20px var(--primary-glow);
+      transform: translateY(-6px) perspective(800px) rotateY(-6deg) scale(1.03);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.75), 0 0 24px var(--primary-glow);
     }
 
     .timeline-step-num {
@@ -1566,7 +1808,9 @@
   <!-- Top Header Navigation Bar -->
   <header class="main-header">
     <div class="brand-wrap">
-      <div class="brand-logo" title="ҚРМУ">Қ</div>
+      <div class="brand-logo-crest" title="Қазақстан-Ресей Медициналық Университеті">
+        <img src="./images/krmu_logo.png" alt="ҚРМУ эмблемасы" class="brand-krmu-img">
+      </div>
       <div class="brand-text">
         <span class="brand-title">ҚРМУ • Жалпы медицина</span>
         <span class="brand-sub">107Б тобы | 9-дәріс</span>
@@ -1626,9 +1870,18 @@
       <!-- ==================== СЛАЙД 1: ТИТУЛДЫҚ БЕТ ==================== -->
       <section class="slide-item active" data-slide="1">
         <div class="title-hero-wrap">
-          <div class="hero-univ-badge">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            Қазақстан-Ресей Медициналық Университеті (ҚРМУ)
+          <!-- Ресми ҚРМУ Эмблемасы және Бренд Блогы -->
+          <div class="hero-krmu-crest-card" title="Қазақстан-Ресей Медициналық Университеті">
+            <div class="krmu-logo-wrapper">
+              <img src="./images/krmu_logo.png" alt="ҚРМУ логотипі" class="krmu-emblem-img">
+            </div>
+            <div class="krmu-crest-text-wrap">
+              <div class="krmu-pill-tag">
+                <span class="krmu-tag-dot"></span>
+                ҚАЗАҚСТАН-РЕСЕЙ МЕДИЦИНАЛЫҚ УНИВЕРСИТЕТІ
+              </div>
+              <div class="krmu-crest-subtitle">Жалпы медицина факультеті • 107Б тобы • 2026 ж.</div>
+            </div>
           </div>
 
           <h1 class="hero-main-title">
@@ -1640,29 +1893,68 @@
             9-ДӘРІС • ҒЫЛЫМИ-ТЕОРИЯЛЫҚ ЖӘНЕ КЛИНИКАЛЫҚ ТАЛДАУ
           </div>
 
-          <!-- Авторы: Накипов Әділжан, Аханай Ернур, Серік Мерей (107Б тобы) -->
+          <!-- Авторы: 3D Flip Card Hover (Перелистывающиеся карточки) -->
           <div class="authors-grid">
-            <div class="author-card">
-              <div class="author-avatar">НӘ</div>
-              <div class="author-info">
-                <h4>Накипов Әділжан</h4>
-                <p>107Б Жалпы медицина</p>
+            <!-- 1-автор: Накипов Әділжан -->
+            <div class="flip-card-wrapper" title="Айналдыру үшін курсорды ұстаңыз">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="author-avatar">НӘ</div>
+                  <div class="author-info">
+                    <h4>Накипов Әділжан</h4>
+                    <p>107Б Жалпы медицина</p>
+                  </div>
+                  <div class="flip-hint-icon">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  </div>
+                </div>
+                <div class="flip-card-back">
+                  <div class="flip-role-badge">1-бөлім Спикері</div>
+                  <div class="flip-topic-title">Гигиена, Холера & Демография</div>
+                  <div class="flip-sub-info">Қоғамдық медицина институты</div>
+                </div>
               </div>
             </div>
 
-            <div class="author-card">
-              <div class="author-avatar">АЕ</div>
-              <div class="author-info">
-                <h4>Аханай Ернұр</h4>
-                <p>107Б Жалпы медицина</p>
+            <!-- 2-автор: Аханай Ернұр -->
+            <div class="flip-card-wrapper" title="Айналдыру үшін курсорды ұстаңыз">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="author-avatar" style="background: linear-gradient(135deg, #10b981, #00d2ff);">АЕ</div>
+                  <div class="author-info">
+                    <h4>Аханай Ернұр</h4>
+                    <p>107Б Жалпы медицина</p>
+                  </div>
+                  <div class="flip-hint-icon">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  </div>
+                </div>
+                <div class="flip-card-back emerald">
+                  <div class="flip-role-badge emerald">2-бөлім Спикері</div>
+                  <div class="flip-topic-title">Вакцинация & Микробиология</div>
+                  <div class="flip-sub-info">Дженнер, Пастер, Кох мұрасы</div>
+                </div>
               </div>
             </div>
 
-            <div class="author-card">
-              <div class="author-avatar">СМ</div>
-              <div class="author-info">
-                <h4>Серік Мерей</h4>
-                <p>107Б Жалпы медицина</p>
+            <!-- 3-автор: Серік Мерей -->
+            <div class="flip-card-wrapper" title="Айналдыру үшін курсорды ұстаңыз">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="author-avatar" style="background: linear-gradient(135deg, #f59e0b, #ec4899);">СМ</div>
+                  <div class="author-info">
+                    <h4>Серік Мерей</h4>
+                    <p>107Б Жалпы медицина</p>
+                  </div>
+                  <div class="flip-hint-icon">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  </div>
+                </div>
+                <div class="flip-card-back amber">
+                  <div class="flip-role-badge amber">3-бөлім Спикері</div>
+                  <div class="flip-topic-title">Педиатрия & Психиатрия</div>
+                  <div class="flip-sub-info">Пинель гуманизмі және Quiz Arena</div>
+                </div>
               </div>
             </div>
           </div>
