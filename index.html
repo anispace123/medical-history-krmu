@@ -1429,6 +1429,132 @@
         padding: 16px 16px 80px 16px;
       }
     }
+
+    /* QR Code Modal */
+    .qr-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(5, 11, 20, 0.78);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      z-index: 300;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .qr-modal-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .qr-modal-card {
+      background: #091325;
+      border: 1px solid var(--border-accent);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85), 0 0 30px var(--primary-glow);
+      border-radius: var(--radius-xl);
+      padding: 32px 34px;
+      max-width: 380px;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      transform: scale(0.92);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .qr-modal-overlay.open .qr-modal-card {
+      transform: scale(1);
+    }
+
+    .qr-close-btn {
+      position: absolute;
+      top: 14px;
+      right: 18px;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 26px;
+      cursor: pointer;
+      line-height: 1;
+      transition: color 0.2s ease;
+    }
+
+    .qr-close-btn:hover {
+      color: #fff;
+    }
+
+    .qr-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: rgba(0, 210, 255, 0.12);
+      border: 1px solid rgba(0, 210, 255, 0.3);
+      color: var(--primary);
+    }
+
+    .qr-image-wrap {
+      background: #ffffff;
+      padding: 12px;
+      border-radius: 16px;
+      margin: 14px 0 14px 0;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qr-image-wrap img {
+      display: block;
+      width: 210px;
+      height: 210px;
+      border-radius: 6px;
+    }
+
+    .qr-link-text {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--primary);
+      text-align: center;
+      word-break: break-all;
+      margin-bottom: 14px;
+      background: rgba(0, 210, 255, 0.08);
+      padding: 6px 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(0, 210, 255, 0.2);
+    }
+
+    .copy-link-btn {
+      padding: 10px 22px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border-light);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .copy-link-btn:hover {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #050b14;
+      box-shadow: 0 0 16px var(--primary-glow);
+    }
   </style>
 </head>
 <body class="presentation-mode">
@@ -1473,6 +1599,11 @@
 
       <!-- Table of Contents Drawer Toggle -->
       <button class="icon-btn" id="btn-open-drawer" title="Слайдтар мазмұны">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      </button>
+
+      <!-- QR Code Modal Toggle -->
+      <button class="icon-btn" id="btn-open-qr" title="QR код (смартфоннан ашу)">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
       </button>
 
@@ -1544,6 +1675,10 @@
             <button class="btn-secondary-action" id="btn-hero-explore">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
               Жоспармен танысу
+            </button>
+            <button class="btn-secondary-action" id="btn-hero-qr" title="Телефоннан ашу үшін QR кодты көру">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              📱 QR Код
             </button>
           </div>
         </div>
@@ -2384,6 +2519,19 @@
               </div>
             </div>
 
+            <div style="background: rgba(0, 210, 255, 0.05); border: 1px solid rgba(0, 210, 255, 0.25); border-radius: 12px; padding: 12px; margin-top: 12px; display: flex; align-items: center; gap: 14px;">
+              <div style="background: #fff; padding: 5px; border-radius: 8px; flex-shrink: 0; cursor: pointer;" onclick="app.openQR()" title="Үлкейтіп көру">
+                <img src="./images/qr_code.png" alt="QR Code" width="58" height="58" style="display: block;">
+              </div>
+              <div style="flex: 1;">
+                <div style="font-size: 11px; font-weight: 700; color: var(--primary); text-transform: uppercase;">📱 Онлайн сайттың QR-коды:</div>
+                <div style="font-size: 10.5px; font-family: 'JetBrains Mono'; color: #cbd5e1; word-break: break-all;">https://anispace123.github.io/medical-history-krmu/</div>
+                <button class="nav-arrow-btn" onclick="app.openQR()" style="height: 26px; padding: 0 10px; font-size: 11px; margin-top: 5px;">
+                  Үлкен QR кодты ашу 🔍
+                </button>
+              </div>
+            </div>
+
             <div style="display: flex; gap: 10px; margin-top: 14px;">
               <button class="nav-arrow-btn" onclick="window.print()" style="flex: 1; justify-content: center;">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
@@ -2440,6 +2588,27 @@
       <div class="drawer-list" id="drawer-list-container">
         <!-- Тізім динамикалық түрде толтырылады -->
       </div>
+    </div>
+  </div>
+
+  <!-- QR Code Modal Dialog -->
+  <div class="qr-modal-overlay" id="qr-modal-overlay">
+    <div class="qr-modal-card">
+      <button class="qr-close-btn" id="btn-close-qr" title="Жабу">&times;</button>
+      <div class="qr-badge">ТЕЛЕФОННАН АШУ ҮШІН СКАНЕРЛЕҢІЗ</div>
+      <h3 style="color: #fff; font-size: 17px; margin: 12px 0 4px 0; text-align: center;">9-Дәріс Интерактивті Презентациясы</h3>
+      <p style="color: var(--text-muted); font-size: 12px; text-align: center; margin-bottom: 12px;">Қазақстан-Ресей Медициналық Университеті • 107Б тобы</p>
+      
+      <div class="qr-image-wrap">
+        <img src="./images/qr_code.png" alt="QR Code" width="210" height="210">
+      </div>
+
+      <div class="qr-link-text">https://anispace123.github.io/medical-history-krmu/</div>
+      
+      <button class="copy-link-btn" id="btn-copy-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        <span id="copy-btn-text">Сілтемені көшіру</span>
+      </button>
     </div>
   </div>
 
@@ -2765,6 +2934,7 @@
             this.goToSlide(this.totalSlides);
           } else if (e.key === 'Escape') {
             this.closeDrawer();
+            this.closeQR();
           }
         });
 
@@ -2820,6 +2990,46 @@
           this.timerRunning = !this.timerRunning;
           document.getElementById('speaker-timer').style.opacity = this.timerRunning ? '1' : '0.5';
         });
+
+        // QR Code Modal Listeners
+        const btnOpenQr = document.getElementById('btn-open-qr');
+        if (btnOpenQr) btnOpenQr.addEventListener('click', () => this.openQR());
+
+        const btnHeroQr = document.getElementById('btn-hero-qr');
+        if (btnHeroQr) btnHeroQr.addEventListener('click', () => this.openQR());
+
+        const btnCloseQr = document.getElementById('btn-close-qr');
+        if (btnCloseQr) btnCloseQr.addEventListener('click', () => this.closeQR());
+
+        const qrOverlay = document.getElementById('qr-modal-overlay');
+        if (qrOverlay) {
+          qrOverlay.addEventListener('click', (e) => {
+            if (e.target.id === 'qr-modal-overlay') this.closeQR();
+          });
+        }
+
+        const btnCopyLink = document.getElementById('btn-copy-link');
+        if (btnCopyLink) {
+          btnCopyLink.addEventListener('click', () => {
+            const url = 'https://anispace123.github.io/medical-history-krmu/';
+            navigator.clipboard.writeText(url).then(() => {
+              const copyTxt = document.getElementById('copy-btn-text');
+              copyTxt.innerText = 'Көшірілді! ✅';
+              this.audio.playSuccess();
+              setTimeout(() => {
+                copyTxt.innerText = 'Сілтемені көшіру';
+              }, 2000);
+            }).catch(() => {});
+          });
+        }
+      }
+
+      openQR() {
+        document.getElementById('qr-modal-overlay').classList.add('open');
+      }
+
+      closeQR() {
+        document.getElementById('qr-modal-overlay').classList.remove('open');
       }
 
       startTimer() {
